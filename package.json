@@ -1,0 +1,31 @@
+{
+  "name": "@jiumao/dharma",
+  "version": "0.0.1",
+  "description": "前端常用工具方法",
+  "repository": "git@github.com:ts-react/dharma.git",
+  "author": "wangxingkang <wang_xingkang@qq.com>",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "unpkg": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "bootstrap": "yarn || npm i",
+    "build": "umi-library build",
+    "test": "umi-test"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.12",
+    "typescript": "^3.4.5",
+    "umi-library": "^1.5.1",
+    "umi-test": "^1.5.7"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
