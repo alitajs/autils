@@ -1,1 +1,1 @@
-export { transformToChinese } from './number/transform-to-chinese';
+export { numberToChinese } from './number/number-to-chinese';
