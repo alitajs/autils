@@ -1,5 +1,1 @@
-import numberToChinese from './number/transform-to-chinese';
-
-export default {
-  numberToChinese
-}
+export { transformToChinese } from './number/transform-to-chinese';

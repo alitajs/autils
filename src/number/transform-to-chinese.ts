@@ -76,7 +76,7 @@ function intToChinese(number: number): string {
   return result;
 }
 
-function transformToChinese(number: number): string {
+export function transformToChinese(number: number): string {
   if (!isNumber(number)) {
     return number.toString();
   }
@@ -86,5 +86,3 @@ function transformToChinese(number: number): string {
 
   return intChinese + floatChinese;
 }
-
-export default transformToChinese;
