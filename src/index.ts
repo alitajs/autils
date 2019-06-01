@@ -13,7 +13,7 @@ export {
   phoneRegexp,
   urlRegex
 } from './regexp/config';
-export { numberToChinese } from './number/number-to-chinese';
+export { numberToChinese } from './number/numberToChinese';
 export { urlToList } from './url/tools';
 
 export default {
