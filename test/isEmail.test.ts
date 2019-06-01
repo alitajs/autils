@@ -1,4 +1,4 @@
-import { isEmail } from './is-email';
+import isEmail from '../src/isEmail';
 
 describe('test isEmail function', () => {
   it('test 156148958@qq.com', () => {

@@ -1,4 +1,4 @@
-import { isNumber } from '../utils/utils';
+import isNumber from '../isNumber';
 
 // 单个数字集合
 const digits = ['零','一', '二', '三', '四', '五', '六', '七', '八', '九'];

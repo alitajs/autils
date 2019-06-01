@@ -1,4 +1,4 @@
-import { urlToList } from './tools';
+import { urlToList } from '../src/url/tools';
 
 describe('test urlToList function', () => {
   //users/2144/detail => ['/users','/users/2144,'/users/2144/detail']

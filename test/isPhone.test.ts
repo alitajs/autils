@@ -1,4 +1,4 @@
-import { isPhone } from './is-phone';
+import isPhone from '../src/isPhone';
 
 describe('test isIdCard function', () => {
   it('test 17710067606', () => {

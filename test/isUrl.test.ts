@@ -1,4 +1,4 @@
-import { isUrl } from './is-url';
+import isUrl from '../src/isUrl';
 
 describe('test isUrl function', () => {
   it('test other string', () => {
