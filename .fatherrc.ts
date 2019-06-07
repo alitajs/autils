@@ -4,7 +4,10 @@ const options: IBundleOptions = {
   esm: {
     type: 'rollup'
   },
-  cjs: 'rollup'
+  cjs: 'rollup',
+  umd: {
+    name: 'dharma'
+  }
 };
 
 export default options;

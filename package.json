@@ -8,7 +8,7 @@
   "main": "dist/index.js",
   "unpkg": "dist/index.js",
   "module": "dist/index.esm.js",
-  "typings": "dist/index.d.ts",
+  "typings": "dist/src/index.d.ts",
   "files": [
     "dist",
     "lib",
@@ -16,14 +16,17 @@
   ],
   "scripts": {
     "bootstrap": "yarn || npm i",
-    "build": "umi-library build",
+    "build": "father build",
+    "doc:dev": "father doc dev",
+    "doc:build": "father doc build",
+    "doc:deploy": "father doc deploy",
     "test": "umi-test",
     "prepare": "yarn build"
   },
   "devDependencies": {
     "@types/jest": "^24.0.12",
+    "father": "^2.5.2-alpha.3",
     "typescript": "^3.4.5",
-    "umi-library": "^1.5.1",
     "umi-test": "^1.5.7"
   },
   "publishConfig": {
