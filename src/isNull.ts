@@ -14,8 +14,6 @@
  * isNull(void 0)
  * // => false
  */
-function isNull(value: any): boolean {
-  return value === null
+export function isNull(value: any): boolean {
+  return value === null;
 }
-
-export default isNull;

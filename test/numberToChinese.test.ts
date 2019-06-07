@@ -1,4 +1,4 @@
-import { numberToChinese } from '../src/number/numberToChinese';
+import { numberToChinese } from '../src/numberToChinese';
 
 describe('test transform-to-chinese', () => {
   it('test 0', () => {

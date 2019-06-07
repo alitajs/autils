@@ -1,7 +1,5 @@
-import { idCardRegexp } from '../src/regexp/config';
+import { idCardRegexp } from './regexps';
 
-function isIdCard(value: any): boolean {
+export function isIdCard(value: any): boolean {
   return idCardRegexp.test(value);
 }
-
-export default isIdCard;

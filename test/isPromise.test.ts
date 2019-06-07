@@ -1,4 +1,4 @@
-import isPromise from '../src/isPromise';
+import { isPromise } from '../src/isPromise';
 
 describe('test isPromise function', () => {
   it('test number', () => {

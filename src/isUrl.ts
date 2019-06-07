@@ -1,7 +1,5 @@
-import { urlRegex } from './regexp/config';
+import { urlRegex } from './regexps';
 
-function isUrl(value: any): boolean {
+export function isUrl(value: any): boolean {
   return urlRegex.test(value);
 }
-
-export default isUrl;

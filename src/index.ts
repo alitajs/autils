@@ -1,30 +1,16 @@
-import isNumber from './isNumber';
-import isPromise from './isPromise';
-import isString from './isString';
-import isArray from './isArray';
-import isNull from './isNull';
-import isEmail from './isEmail';
-import isPhone from './isPhone';
-import isUrl from './isUrl';
-import isIdCard from './isIdCard';
-export {
-  idCardRegexp,
-  emailRegexp,
-  phoneRegexp,
-  urlRegex
-} from './regexp/config';
-export { numberToChinese } from './number/numberToChinese';
-export { urlToList } from './url/tools';
-
-export default {
-  isNumber,
-  isPromise,
-  isString,
-  isIdCard,
-  isEmail,
-  isPhone,
-  isArray,
-  isUrl,
-  isNull
-}
-
+export * from './groupBy';
+export * from './isArray';
+export * from './isBoolean';
+export * from './isEmail';
+export * from './isIdCard';
+export * from './isNaN';
+export * from './isNull';
+export * from './isNumber';
+export * from './isPhone';
+export * from './isPromise';
+export * from './isString';
+export * from './isUndefined';
+export * from './isUrl';
+export * from './numberToChinese';
+export * from './regexps';
+export * from './urlToList';

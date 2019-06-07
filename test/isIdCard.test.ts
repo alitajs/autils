@@ -1,4 +1,4 @@
-import isIdCard from '../src/isIdCard';
+import { isIdCard } from '../src/isIdCard';
 
 describe('test isIdCard function', () => {
   it('test 142701199203224545', () => {

@@ -1,4 +1,4 @@
-import isNull from '../src/isNull';
+import { isNull } from '../src/isNull';
 
 describe('test isNull function', () => {
   it('test number', () => {

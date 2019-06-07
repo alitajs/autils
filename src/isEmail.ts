@@ -1,23 +1,21 @@
-import { emailRegexp } from './regexp/config';
+import { emailRegexp } from './regexps';
 
 /**
  * 检查`value`是否为邮箱。
  *
- * @since 0.0.5
+ * @since 0.0.6
  *
  * @param value
  * @returns {boolean}
  *
  * @example
  *
- * isEmail('156148958@qq.com')
+ * isEmail('156148999@qq.com')
  * // => true
  *
- * isEmail('156148958.com')
- * // => false
+ * isEmail('wang_xingkang@qq.com')
+ * // => true
  */
-function isEmail(value: any): boolean {
+export function isEmail(value: any): boolean {
   return emailRegexp.test(value);
 }
-
-export default isEmail;

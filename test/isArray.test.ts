@@ -1,4 +1,4 @@
-import isArray from '../src/isArray';
+import { isArray } from '../src/isArray';
 
 describe('test isArray function', () => {
   it('test number', () => {

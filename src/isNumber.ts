@@ -14,8 +14,6 @@
  * isNumber(Number.MIN_VALUE)
  * // => true
  */
-function isNumber(value: any): boolean {
+export function isNumber(value: any): boolean {
   return typeof value === 'number';
 }
-
-export default isNumber;

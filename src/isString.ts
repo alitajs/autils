@@ -14,8 +14,6 @@
  * isString('string')
  * // => true
  */
-function isString(value: any): boolean {
+export function isString(value: any): boolean {
   return typeof value === 'string';
 }
-
-export default isString;
