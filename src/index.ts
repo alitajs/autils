@@ -1,3 +1,5 @@
+export * from './arrayToTree';
+export * from './deepClone';
 export * from './groupBy';
 export * from './isArray';
 export * from './isBoolean';
@@ -6,6 +8,7 @@ export * from './isIdCard';
 export * from './isNaN';
 export * from './isNull';
 export * from './isNumber';
+export * from './isObject';
 export * from './isPhone';
 export * from './isPromise';
 export * from './isString';
