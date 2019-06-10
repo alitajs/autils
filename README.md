@@ -1,7 +1,7 @@
-# dharma
+# awe-utils
 
-[![NPM version](https://img.shields.io/npm/v/@jiumao/dharma.svg?style=flat)](https://npmjs.org/package/@jiumao/dharma)
-[![NPM downloads](http://img.shields.io/npm/dm/@jiumao/dharma.svg?style=flat)](https://npmjs.org/package/@jiumao/dharma)
+[![NPM version](https://img.shields.io/npm/v/awe-utils.svg?style=flat)](https://npmjs.org/package/awe-utils)
+[![NPM downloads](http://img.shields.io/npm/dm/awe-utils.svg?style=flat)](https://npmjs.org/package/awe-utils)
 
 > 前端工具库 
 

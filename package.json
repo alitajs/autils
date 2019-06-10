@@ -1,8 +1,8 @@
 {
-  "name": "@jiumao/dharma",
+  "name": "awe-utils",
   "version": "0.0.7",
-  "description": "前端常用工具方法",
-  "repository": "git@github.com:ts-react/dharma.git",
+  "description": "Awesome Utils(前端常用工具方法)",
+  "repository": "git@github.com:ts-react/awe-utils.git",
   "author": "wangxingkang <wang_xingkang@qq.com>",
   "license": "MIT",
   "main": "dist/index.js",
