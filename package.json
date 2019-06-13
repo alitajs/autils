@@ -10,9 +10,7 @@
   "module": "dist/index.esm.js",
   "typings": "dist/src/index.d.ts",
   "files": [
-    "dist",
-    "lib",
-    "src"
+    "dist"
   ],
   "scripts": {
     "bootstrap": "yarn || npm i",
