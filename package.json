@@ -1,12 +1,12 @@
 {
   "name": "awe-utils",
-  "version": "0.0.7",
+  "version": "0.1.0",
   "description": "Awesome Utils(前端常用工具方法)",
   "repository": "git@github.com:ts-react/awe-utils.git",
   "author": "wangxingkang <wang_xingkang@qq.com>",
   "license": "MIT",
   "main": "dist/index.js",
-  "unpkg": "dist/index.js",
+  "unpkg": "dist/index.umd.js",
   "module": "dist/index.esm.js",
   "typings": "dist/src/index.d.ts",
   "files": [
@@ -20,14 +20,13 @@
     "doc:dev": "father doc dev",
     "doc:build": "father doc build",
     "doc:deploy": "father doc deploy",
-    "test": "umi-test",
+    "test": "father test",
     "prepare": "yarn build"
   },
   "devDependencies": {
     "@types/jest": "^24.0.12",
-    "father": "^2.5.2-alpha.3",
-    "typescript": "^3.4.5",
-    "umi-test": "^1.5.7"
+    "father": "^2.7.2",
+    "typescript": "^3.4.5"
   },
   "publishConfig": {
     "access": "public"
