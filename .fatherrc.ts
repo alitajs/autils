@@ -19,7 +19,7 @@ const options: IBundleOptions = {
   },
   cjs: 'rollup',
   umd: {
-    name: 'dharma'
+    name: 'AwesomeUtils'
   }
 };
 
