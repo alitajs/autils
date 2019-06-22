@@ -15,7 +15,8 @@ function getEntries(path) {
 const options: IBundleOptions = {
   entry: getEntries(SrcDirectory),
   esm: {
-    type: 'rollup'
+    type: 'rollup',
+    importLibToEs: true
   },
   cjs: 'rollup',
   umd: {
