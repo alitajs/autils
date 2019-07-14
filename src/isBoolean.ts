@@ -1,19 +1,18 @@
 /**
- * 检查`value`是否为`boolean`。
+ * 检查 `value` 是否是一个布尔值。
  *
  * @since 0.0.6
- *
- * @param value
- * @returns {boolean}
- *
+ * @param value 要检查的值
+ * @returns `value` 是布尔值返回 `true`，否则返回 `false`
  * @example
- *
- * isBoolean(true)
- * // => true
- *
- * isBoolean([1, 2, 3])
- * // => false
+ * ```
+ * isBoolean(true) // => true
+ * isBoolean(false) // => true
+ * isBoolean('true') // => false
+ * ```
  */
-export function isBoolean(value: any): boolean {
-  return typeof value === 'boolean'
+export function isBoolean(
+  value: any
+): value is boolean {
+  return typeof value === 'boolean';
 }

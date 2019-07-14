@@ -25,6 +25,7 @@ export type TGetTypeReturn = TLiteralUnion<(
 /**
  * 检测 `value` 的类型
  *
+ * @since 0.1.1
  * @param value 要检测的值
  * @returns 返回检测值的类型
  * @example

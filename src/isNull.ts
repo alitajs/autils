@@ -1,19 +1,16 @@
 /**
- * 检查`value`是否为`null`。
+ * 检查 `value` 是否是 `null`
  *
  * @since 0.0.6
- *
- * @param value
- * @returns {boolean}
- *
+ * @param value 要检查的值
+ * @returns `value` 是 `null` 返回 `true`，否则返回 `false`
  * @example
- *
- * isNull(null)
- * // => true
- *
- * isNull(void 0)
- * // => false
+ * ```ts
+ * isNull(null) // => true
+ * ```
  */
-export function isNull(value: any): boolean {
+export function isNull(
+  value: any
+): value is null {
   return value === null;
 }

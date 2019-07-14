@@ -1,6 +1,6 @@
-import { isString } from '../src/isString';
+import { isString } from '@/isString';
 
-describe('test isString function', () => {
+describe('isString', () => {
   it('test number', () => {
     expect(isString(3)).toEqual(false);
   });

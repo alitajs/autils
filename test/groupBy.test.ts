@@ -1,4 +1,4 @@
-import { groupBy } from '../src/groupBy';
+import { groupBy } from '@/groupBy';
 
 const users = [
   { id: 1, name: 'Jay', age: 20 },
@@ -6,7 +6,7 @@ const users = [
   { id: 3, name: 'Ming', age: 21 },
 ];
 
-describe('test groupBy function', () => {
+describe('groupBy', () => {
   it('test id', () => {
     expect(groupBy(users,item => item.id)).toEqual(
       {

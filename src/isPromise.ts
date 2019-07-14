@@ -2,10 +2,8 @@
  * 检查`value`是否为`Promise`。
  *
  * @since 0.0.6
- *
  * @param value
  * @returns {boolean}
- *
  * @example
  *
  * isPromise(null)

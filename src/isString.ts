@@ -1,19 +1,17 @@
 /**
- * 检查`value`是否为`string`。
+ * 检查 `value` 是否是一个字符串
  *
  * @since 0.0.6
- *
- * @param value
- * @returns {boolean}
- *
+ * @param value 要检查的值
+ * @returns `value` 是字符串返回 `true`，否则返回 `false`
  * @example
- *
- * isString('')
- * // => true
- *
- * isString('string')
- * // => true
+ * ```
+ * isString('') // => true
+ * isString('hello') // => true
+ * ```
  */
-export function isString(value: any): boolean {
-  return typeof value === 'string';
+export function isString(
+  value: any
+): value is string {
+  return typeof value === 'string'
 }

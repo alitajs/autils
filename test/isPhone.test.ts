@@ -1,6 +1,6 @@
-import { isPhone } from '../src/isPhone';
+import { isPhone } from '@/isPhone';
 
-describe('test isIdCard function', () => {
+describe('isPhone', () => {
   it('test 17710067606', () => {
     expect(isPhone('17710067606')).toEqual(true);
   });

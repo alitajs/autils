@@ -4,7 +4,6 @@ import { emailRegexp } from './regexps';
  * 检查`value`是否为邮箱。
  *
  * @since 0.0.6
- *
  * @param value
  * @returns {boolean}
  *

@@ -1,19 +1,17 @@
 /**
- * 检查`value`是否为`array`。
+ * 检查 `value` 是否是一个数组
  *
  * @since 0.0.6
- *
- * @param value
- * @returns {boolean}
- *
+ * @param value 要检查的值
+ * @returns `value` 是数组返回 `true`，否则返回 `false`
  * @example
- *
- * isArray([])
- * // => true
- *
- * isArray([1, 2, 3])
- * // => true
+ * ```
+ * isArray(['x']) // => true
+ * isArray('x') // => false
+ * ```
  */
-export function isArray(value: any): boolean {
-  return Array.isArray(value) || value instanceof Array;
+export function isArray(
+  value: any
+): value is any[] {
+  return Array.isArray(value);
 }

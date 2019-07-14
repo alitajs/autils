@@ -1,6 +1,6 @@
-import { isEmail } from '../src/isEmail';
+import { isEmail } from '@/isEmail';
 
-describe('test isEmail function', () => {
+describe('isEmail', () => {
   it('test 156148958@qq.com', () => {
     expect(isEmail('156148958@qq.com')).toEqual(true);
   });

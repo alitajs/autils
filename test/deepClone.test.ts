@@ -1,6 +1,6 @@
-import { deepClone } from '../src/deepClone';
+import { deepClone } from '@/deepClone';
 
-describe('test deepClone function', () => {
+describe('deepClone', () => {
   it('test number', () => {
     expect(deepClone(1)).toEqual(1);
   });

@@ -2,10 +2,8 @@
  * 转换url为数组
  *
  * @since 0.0.5
- *
  * @param url string
  * @returns {string[]}
- *
  * @example
  *
  * urlToList(test)

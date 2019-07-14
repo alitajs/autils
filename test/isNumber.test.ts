@@ -1,19 +1,17 @@
-import { isNumber } from '../src/isNumber';
+import { isNumber } from '@/isNumber';
 
-describe('test isNumber function', () => {
-  it('test number', () => {
-    expect(isNumber(3)).toEqual(true);
+describe('isNumber', () => {
+  it('should return `true` for numbers', function() {
+    expect(isNumber(0)).toEqual(true);
   });
 
-  it('test MIN_VALUE', () => {
-    expect(isNumber(Number.MIN_VALUE)).toEqual(true);
-  });
-
-  it('test Infinity', () => {
-    expect(isNumber(Infinity)).toEqual(true);
-  });
-
-  it('test string', () => {
-    expect(isNumber('3')).toEqual(false);
+  it('should return `false` for non-numbers', function() {
+    expect(isNumber([1, 2, 3])).toEqual(false);
+    expect(isNumber(true)).toEqual(false);
+    expect(isNumber(new Date)).toEqual(false);
+    expect(isNumber(new Error)).toEqual(false);
+    expect(isNumber({ a: 1 })).toEqual(false);
+    expect(isNumber(/x/)).toEqual(false);
+    expect(isNumber('a')).toEqual(false);
   });
 });

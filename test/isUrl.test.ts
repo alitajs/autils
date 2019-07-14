@@ -1,6 +1,6 @@
-import { isUrl } from '../src/isUrl';
+import { isUrl } from '@/isUrl';
 
-describe('test isUrl function', () => {
+describe('isUrl', () => {
   it('test other string', () => {
     expect(isUrl('test')).toEqual(false);
   });

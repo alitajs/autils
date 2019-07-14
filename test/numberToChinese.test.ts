@@ -1,6 +1,6 @@
-import { numberToChinese } from '../src/numberToChinese';
+import { numberToChinese } from '@/numberToChinese';
 
-describe('test transform-to-chinese', () => {
+describe('numberToChinese', () => {
   it('test 0', () => {
     expect(numberToChinese(0)).toEqual('零')
   });

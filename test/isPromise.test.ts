@@ -1,6 +1,6 @@
-import { isPromise } from '../src/isPromise';
+import { isPromise } from '@/isPromise';
 
-describe('test isPromise function', () => {
+describe('isPromise', () => {
   it('test number', () => {
     expect(isPromise(1)).toEqual(false);
   });

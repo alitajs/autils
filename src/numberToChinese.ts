@@ -78,7 +78,7 @@ function intToChinese(number: number): string {
 
 export function numberToChinese(number: number): string {
   if (!isNumber(number)) {
-    return number.toString();
+    return number;
   }
   const int = Math.floor(number);
   const floatChinese = floatToChinese(number);

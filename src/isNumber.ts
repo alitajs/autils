@@ -1,19 +1,20 @@
 /**
- * 检查`value`是否为`number`。
+ * 检查 `value` 是否是一个数字。
  *
- * @since 0.0.6
+ * `NaN` 不被认为是数字。
  *
- * @param value
- * @returns {boolean}
- *
+ * @since 0.1.1
+ * @param value 要检查的值
+ * @returns `value` 是数字返回 `true`，否则返回 `false`
  * @example
- *
- * isNumber(1)
- * // => true
- *
- * isNumber(Number.MIN_VALUE)
- * // => true
+ * ```
+ * isNumber(1) // => true
+ * isNumber(0.1) // => true
+ * isNumber(NaN) // => false
+ * ```
  */
-export function isNumber(value: any): boolean {
-  return typeof value === 'number';
+export function isNumber(
+  value: any
+): value is number {
+  return typeof value === 'number' && !isNaN(value)
 }
