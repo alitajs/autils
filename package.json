@@ -25,12 +25,10 @@
     "@types/jest": "^24.0.12",
     "@types/qs": "^6.5.3",
     "qs": "^6.7.0",
+    "father": "^2.13.5",
     "typescript": "^3.4.5"
   },
   "publishConfig": {
     "access": "public"
-  },
-  "dependencies": {
-    "father": "^2.13.5"
   }
 }
