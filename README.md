@@ -1,6 +1,6 @@
 <h1 align="center">awe-utils</h1>
 
-
+[![Alita](https://img.shields.io/badge/alitajs-ant%20design%20plus-blue.svg)](https://github.com/alitajs/autils)
 [![NPM version](https://img.shields.io/npm/v/awe-utils.svg?style=flat)](https://npmjs.org/package/awe-utils)
 [![NPM downloads](http://img.shields.io/npm/dm/awe-utils.svg?style=flat)](https://npmjs.org/package/awe-utils)
 
