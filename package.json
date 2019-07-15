@@ -1,5 +1,5 @@
 {
-  "name": "awe-utils",
+  "name": "@alitajs/autils",
   "version": "0.1.2",
   "description": "Awesome Utils(前端常用工具方法)",
   "repository": "git@github.com:ts-react/awe-utils.git",
