@@ -16,12 +16,22 @@
 
 1. 安装依赖
 
-`npm install awe-utils` || `yarn add awe-utils`
+* npm安装
+
+```
+npm install -D @alitajs/autils
+```
+
+* yarn 安装(推荐)
+
+```
+yarn add @alitajs/autils
+```
 
 2. 使用
 
 ```
-import { numberToChinese } from 'awe-utils';
+import { numberToChinese } from '@alitajs/autils';
 
 // 一
 console.log(numberToChinese(1));
