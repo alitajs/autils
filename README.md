@@ -1,7 +1,7 @@
 <h1 align="center">autils</h1>
 
 [![Alita](https://img.shields.io/badge/alitajs-autils-blue.svg)](https://github.com/alitajs/autils)
-[![NPM version](https://img.shields.io/npm/v/%40alitajs%2Fautils.svgawe-utils.svg?style=flat)](https://npmjs.org/package/@alitajs/autils)
+[![NPM version](https://img.shields.io/npm/v/%40alitajs%2Fautils.svg?style=flat)](https://npmjs.org/package/@alitajs/autils)
 [![NPM downloads](http://img.shields.io/npm/dm/%40alitajs%2Fautils.svg?style=flat)](https://npmjs.org/package/@alitajs/autils)
 
 <h2 align="center">小巧实用的前端工具类库。</h2>
