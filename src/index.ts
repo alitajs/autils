@@ -6,7 +6,7 @@ export { arrayToTree } from './arrayToTree';
 export { isArray } from './isArray';
 export { isBoolean } from './isBoolean';
 export { isDate } from './isDate';
-export { isEmail, emailRegexp } from './isEmail';
+export { isEmail } from './isEmail';
 export { isEmptyObject } from './isEmptyObject';
 export { isFunction } from './isFunction';
 export { isIdCard } from './isIdCard';
@@ -17,7 +17,7 @@ export { isNil } from './isNil';
 export { isNull } from './isNull';
 export { isNumber } from './isNumber';
 export { isObject } from './isObject';
-export { isPhone, phoneRegexp } from './isPhone';
+export { isPhone } from './isPhone';
 export { isPromise } from './isPromise';
 export { isRegExp } from './isRegExp';
 export { isString } from './isString';
@@ -30,7 +30,12 @@ export { urlToList } from './urlToList';
 // Class
 export { Policy } from './policy';
 
-export * from './regexps';
+// Regexp
+export { urlRegex } from './urlRegex';
+export { emailRegexp } from './emailRegexp';
+export { phoneRegexp } from './phoneRegexp';
+export { idCardRegexp } from './idCardRegexp';
+
 // Utils
 export { numberToChinese } from './numberToChinese';
 export { deepClone } from './deepClone';
