@@ -25,4 +25,9 @@ export { isUndefined } from './isUndefined';
 export { isUrl } from './isUrl';
 export { numberToChinese } from './numberToChinese';
 export * from './regexps';
+
+// url utils
 export { urlToList } from './urlToList';
+
+// class
+export { Policy } from './policy';
