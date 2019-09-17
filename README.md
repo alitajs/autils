@@ -11,6 +11,7 @@
 * ✏️ TypeScript: 使用 TS 编写，类型友好
 * ✨ 源于项目：日常项目的积累
 * 🐳 严格测试：使用Jest对每个方法，进行严格的测试
+* ⚡️ 按需加载: 支持按需加载，请配合babel-plugin-import使用
 
 ## 使用
 
@@ -85,8 +86,32 @@ numberToChinese(1);
 // => 一
 ```
 
+## 按需加载
 
+* 安装 `babel-plugin-import`
 
+```
+yarn add --dev babel-plugin-import
+```
 
+* 配置
 
+```
+// .babel.config.js
 
+module.exports = function (api) {
+  api.cache(true)
+
+  const plugins = [
+    [require.resolve('babel-plugin-import'), {
+      libraryName: '@alitajs/autils',
+      libraryDirectory: 'es',
+      camel2DashComponentName: false
+    }]
+  ];
+
+  return {
+    plugins
+  };
+}
+```
