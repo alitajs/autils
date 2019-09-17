@@ -1,6 +1,6 @@
-import { isArray } from './isArray';
-import { deepClone } from './deepClone';
-import { groupBy } from './groupBy';
+import isArray from './isArray';
+import deepClone from './deepClone';
+import groupBy from './groupBy';
 
 interface IItem {
   [key: string]: any;
@@ -73,7 +73,7 @@ function groupByParents(array, options?: IArrayToTreeOptions) {
  * @example
  *
  */
-export function arrayToTree(
+export default function arrayToTree(
   list: IItem[],
   options?: IArrayToTreeOptions
 ) {

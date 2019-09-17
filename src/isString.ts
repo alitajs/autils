@@ -10,7 +10,7 @@
  * isString('hello') // => true
  * ```
  */
-export function isString(
+export default function isString(
   value: any
 ): value is string {
   return typeof value === 'string'

@@ -10,7 +10,7 @@
  * isFunction(2) // => false
  * ```
  */
-export function isFunction(
+export default function isFunction(
   value: any
 ): value is Function {
   return typeof value === 'function';

@@ -2,7 +2,7 @@ export interface GroupByIterator<T, K> {
   (item: T, index: number, data: T[]): K,
 }
 
-export function groupBy<T, K extends keyof any>(
+export default function groupBy<T, K extends keyof any>(
   data: T[],
   iterator: GroupByIterator<T, K>,
 ) {

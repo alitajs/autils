@@ -4,7 +4,7 @@
  * @since 0.1.1
  * @param source
  */
-export function arrayToObject(
+export default function arrayToObject(
   source: any[]
 ) {
   const obj = {};

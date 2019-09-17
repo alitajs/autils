@@ -1,4 +1,4 @@
-import { isArray } from './isArray';
+import isArray from './isArray';
 
 /**
  * 检查 `obj` 是否是一个空对象
@@ -12,7 +12,7 @@ import { isArray } from './isArray';
  * isFunction({a: 1}) // => false
  * ```
  */
-export function isEmptyObject(
+export default function isEmptyObject(
   obj: object
 ): boolean {
   if (!obj || typeof obj !== 'object' || isArray(obj)) {

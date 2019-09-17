@@ -1,4 +1,4 @@
-import { isInteger } from './isInteger';
+import isInteger from './isInteger';
 
 /**
  * 检查 `value` 是否是一个负整数
@@ -12,7 +12,7 @@ import { isInteger } from './isInteger';
  * isNegativeInteger(1) // => false
  * ```
  */
-export function isNegativeInteger(
+export default function isNegativeInteger(
   value: any
 ): value is number {
   return value < 0 && isInteger(value);

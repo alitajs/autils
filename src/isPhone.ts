@@ -1,4 +1,4 @@
-import { phoneRegexp } from './phoneRegexp';
+import phoneRegexp from './phoneRegexp';
 
 /**
  * 检查`value`是否为手机号。
@@ -14,6 +14,6 @@ import { phoneRegexp } from './phoneRegexp';
  * isBoolean('11710067607')
  * // => false
  */
-export function isPhone(value: any): boolean {
+export default function isPhone(value: any): boolean {
   return phoneRegexp.test(value);
 }

@@ -10,7 +10,7 @@
  * isArray('x') // => false
  * ```
  */
-export function isArray(
+export default function isArray(
   value: any
 ): value is any[] {
   return Array.isArray(value);

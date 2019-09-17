@@ -11,7 +11,7 @@
  * isInteger(-1) // => true
  * ```
  */
-export function isInteger(
+export default function isInteger(
   value: any
 ): value is number {
   return Number.isInteger(value)

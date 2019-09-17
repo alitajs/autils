@@ -8,4 +8,6 @@
  * phoneRegexp.test('17710497878')
  * // => true
  * */
-export const phoneRegexp = /^(\+?0?86\-?)?1[3-9]\d{9}$/;
+const phoneRegexp = /^(\+?0?86\-?)?1[3-9]\d{9}$/;
+
+export default phoneRegexp;

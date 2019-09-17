@@ -1,4 +1,4 @@
-import { isNull } from '@/isNull';
+import isNull from '@/isNull';
 
 describe('isNull', () => {
   it('should return `true` for `null` values', function() {

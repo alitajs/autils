@@ -11,7 +11,7 @@ import { getType } from './getType';
  * isRegExp(new RegExp('hello')) // => true
  * ```
  */
-export function isRegExp(
+export default function isRegExp(
   value: any
 ): value is RegExp {
   return getType(value) === 'RegExp'

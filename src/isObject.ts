@@ -10,7 +10,7 @@
  * isObject(1) // => false
  * ```
  */
-export function isObject(
+export default function isObject(
   value: any
 ): value is object {
   const type = typeof value;

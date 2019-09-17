@@ -11,7 +11,7 @@ import { getType } from './getType';
  * isDate(new Date()) // => true
  * ```
  */
-export function isDate(
+export default function isDate(
   value: any
 ): value is Date {
   return getType(value) === 'Date';

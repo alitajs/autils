@@ -1,5 +1,5 @@
-import { isString } from './isString';
-import { isArray } from './isArray';
+import isString from './isString';
+import isArray from './isArray';
 
 export interface IModuleAction {
   [module: string]: string[]
@@ -22,7 +22,7 @@ export interface IPolicyData {
   statement: IStatement[]
 }
 
-export class Policy {
+export default class Policy {
   private readonly separator: string;
   public moduleMap: IModuleAction = {};
   public allowActions: string[];
@@ -176,5 +176,3 @@ export class Policy {
     return actions;
   };
 }
-
-export default Policy;

@@ -10,7 +10,7 @@
  * isNaN(2) // => false
  * ```
  */
-export function isNaN(
+export default function isNaN(
   value: any
 ): boolean {
   return value !== value;

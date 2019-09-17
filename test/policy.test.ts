@@ -1,4 +1,4 @@
-import { Policy, IAction } from '@/policy';
+import Policy, { IAction } from '@/policy';
 
 const actions: IAction[] = [
   { module: 'module1', action: 'action1' },

@@ -1,4 +1,4 @@
-import { emailRegexp } from './emailRegexp';
+import emailRegexp from './emailRegexp';
 /**
  * 检查`value`是否为邮箱。
  *
@@ -14,6 +14,6 @@ import { emailRegexp } from './emailRegexp';
  * isEmail('wang_xingkang@qq.com')
  * // => true
  */
-export function isEmail(value: any): boolean {
+export default function isEmail(value: any): boolean {
   return emailRegexp.test(value);
 }

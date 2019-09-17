@@ -1,4 +1,4 @@
-import { isUrl } from '@/isUrl';
+import isUrl from '@/isUrl';
 
 describe('isUrl', () => {
   it('test other string', () => {

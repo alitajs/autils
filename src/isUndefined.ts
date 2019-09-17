@@ -10,7 +10,7 @@
  * isUndefined(void 0) // => true
  * ```
  */
-export function isUndefined(
+export default function isUndefined(
   value: any
 ): value is undefined {
   return value === undefined

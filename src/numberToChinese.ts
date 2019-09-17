@@ -1,4 +1,4 @@
-import { isNumber } from './isNumber';
+import isNumber from './isNumber';
 
 // 单个数字集合
 const digits = ['零','一', '二', '三', '四', '五', '六', '七', '八', '九'];
@@ -76,7 +76,7 @@ function intToChinese(number: number): string {
   return result;
 }
 
-export function numberToChinese(number: number): string {
+export default function numberToChinese(number: number): string {
   if (!isNumber(number)) {
     return number + '';
   }

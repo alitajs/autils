@@ -8,4 +8,6 @@
  * emailRegexp.test('156148958@qq.com')
  * // => true
  * */
-export const emailRegexp = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
+const emailRegexp = /\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
+
+export default emailRegexp;

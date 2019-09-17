@@ -1,4 +1,4 @@
-import { isPhone } from '@/isPhone';
+import isPhone from '@/isPhone';
 
 describe('isPhone', () => {
   it('test 17710067606', () => {
