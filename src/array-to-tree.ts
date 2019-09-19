@@ -1,6 +1,6 @@
-import isArray from './isArray';
-import deepClone from './deepClone';
-import groupBy from './groupBy';
+import isArray from './is-array';
+import deepClone from './deep-clone';
+import groupBy from './group-by';
 
 interface IItem {
   [key: string]: any;

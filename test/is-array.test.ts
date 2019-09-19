@@ -1,4 +1,4 @@
-import isArray from '@/isArray';
+import isArray from '@/is-array';
 
 describe('isArray', () => {
   it('should return `true` for arrays', function() {

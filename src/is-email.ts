@@ -1,4 +1,4 @@
-import emailRegexp from './emailRegexp';
+import emailRegexp from './email-regexp';
 /**
  * 检查`value`是否为邮箱。
  *

@@ -1,4 +1,4 @@
-import isBoolean from '@/isBoolean';
+import isBoolean from '@/is-boolean';
 
 describe('isBoolean', () => {
   it('should return `true` for arrays', function() {

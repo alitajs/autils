@@ -1,4 +1,4 @@
-import numberToChinese from '@/numberToChinese';
+import numberToChinese from '@/number-to-chinese';
 
 describe('numberToChinese', () => {
   it('test 0', () => {

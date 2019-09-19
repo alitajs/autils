@@ -1,4 +1,4 @@
-import isInteger from './isInteger';
+import isInteger from './is-integer';
 
 /**
  * 检查 `value` 是否是一个负整数

@@ -1,4 +1,4 @@
-import isString from '@/isString';
+import isString from '@/is-string';
 
 describe('isString', () => {
   it('test number', () => {

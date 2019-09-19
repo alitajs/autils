@@ -1,4 +1,4 @@
-import phoneRegexp from './phoneRegexp';
+import phoneRegexp from './phone-regexp';
 
 /**
  * 检查`value`是否为手机号。

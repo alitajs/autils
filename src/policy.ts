@@ -1,5 +1,5 @@
-import isString from './isString';
-import isArray from './isArray';
+import isString from './is-string';
+import isArray from './is-array';
 
 export interface IModuleAction {
   [module: string]: string[]

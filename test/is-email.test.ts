@@ -1,4 +1,4 @@
-import isEmail from '@/isEmail';
+import isEmail from '@/is-email';
 
 describe('isEmail', () => {
   it('test 156148958@qq.com', () => {
