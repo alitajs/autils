@@ -30,6 +30,9 @@ export { default as urlToList } from './url-to-list';
 // Class
 export { default as Policy } from './policy';
 
+// Math
+export { default as round } from './round';
+
 // Regexp
 export { default as urlRegex } from './url-regexp';
 export { default as emailRegexp } from './email-regexp';
