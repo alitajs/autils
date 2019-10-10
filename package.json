@@ -16,15 +16,14 @@
   "scripts": {
     "bootstrap": "yarn || npm i",
     "build": "lotus-tools build",
-    "test": "umi-test"
+    "test": "walrus test"
   },
   "devDependencies": {
     "@lotus-ui/tools": "^0.2.5",
-    "@types/jest": "^24.0.12",
     "@types/qs": "^6.5.3",
+    "@walrus/cli": "^0.0.6",
     "qs": "^6.7.0",
-    "typescript": "^3.4.5",
-    "umi-test": "^1.7.1"
+    "typescript": "^3.4.5"
   },
   "publishConfig": {
     "access": "public"
