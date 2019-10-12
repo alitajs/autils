@@ -1,5 +1,9 @@
+import isString from '../is-string';
 import { IOptions, defaultOptions } from './config';
+import cns from './langs/cn-s';
+import hks from './langs/hk-s';
 import numberToChinese from './numberToChinese';
+import toMoney from './toMoney';
 
 class ArabicChinese {
   private readonly options: IOptions;
@@ -15,15 +19,39 @@ class ArabicChinese {
    * @param num
    * @param options
    */
-  encode = (num: string | number, options?: IOptions) => {
-    if (!num) return num;
+  encode = (
+    num: string | number,
+    options?: IOptions
+  ): string => {
+    if (!num) return num.toString();
     const _options = Object.assign({}, this.options, options);
-    return numberToChinese(num, _options)
+    const lang = _options.lang === 'cn' ? cns : hks;
+    return numberToChinese(num, lang, _options);
   };
 
-  decode = (zhNum: string, options?: IOptions) => {
+  /**
+   * 中文转数字
+   * @param zhNum
+   * @param options
+   */
+  decode = (zhNum: string, options?: IOptions): string => {
+    if (!isString(zhNum)) return zhNum;
 
   };
+
+  /**
+   * 数字转金额
+   * @param num
+   * @param options
+   */
+  toMoney = (
+    num: string | number,
+    options?: IOptions
+  ): string => {
+    if (!num) return num.toString();
+    const _options = Object.assign({}, this.options, options);
+    return toMoney(num, _options);
+  }
 }
 
 export default ArabicChinese;

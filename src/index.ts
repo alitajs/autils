@@ -40,7 +40,6 @@ export { default as phoneRegexp } from './phone-regexp';
 export { default as idCardRegexp } from './id-card-regexp';
 
 // Utils
-export { default as numberToChinese } from './number-to-chinese';
 export { default as deepClone } from './deep-clone';
 export { getType } from './get-type';
 export { default as groupBy } from './group-by';

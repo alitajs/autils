@@ -1,6 +1,6 @@
-import { ISLang } from './type';
+import { ILang } from './type';
 
-const lang: ISLang = {
+const lang: ILang = {
   digits: '零一二三四五六七八九',
   unitChars: '个十百千万亿',
   minus: '负',

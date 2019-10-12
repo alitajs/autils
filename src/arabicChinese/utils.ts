@@ -1,6 +1,6 @@
 import isNil from '../is-nil';
 import { IOptions } from './config';
-import { ISLang } from './langs/type';
+import { ILang } from './langs/type';
 
 const REG_NUMBER = /^([+-])?0*(\d+)(\.(\d+))?$/;
 const REG_E = /^([+-])?0*(\d+)(\.(\d+))?e(([+-])?(\d+))$/i;
@@ -196,7 +196,7 @@ export function clearZero(
 export function encodeInteger(
   integer: string,
   options: IOptions,
-  lang: ISLang
+  lang: ILang
 ): string {
   const { digits, unitChars } = lang;
   integer = getNumberResult(integer).integer;
