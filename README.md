@@ -6,16 +6,14 @@
 
 <h2 align="center">小巧实用的前端工具类库。</h2>
 
-## 特性
+## ✨ 特性
 
 * ✏️ TypeScript: 使用 TS 编写，类型友好
 * ✨ 源于项目：日常项目的积累
 * 🐳 严格测试：使用Jest对每个方法，进行严格的测试
 * ⚡️ 按需加载: 支持按需加载，请配合babel-plugin-import使用
 
-## 使用
-
-1. 安装依赖
+## 📦 安装
 
 * npm安装
 
@@ -29,62 +27,19 @@ npm install -D @alitajs/autils
 yarn add @alitajs/autils
 ```
 
-2. 使用
+## 📝 目录
 
-```
-import { numberToChinese } from '@alitajs/autils';
+### 工具函数
 
-// 一
-console.log(numberToChinese(1));
+|函数名称|引入版本|描述|
+|--|--|--|
+|isNull|v0.0.6|判断值是否为空|
 
-// 一万
-console.log(numberToChinese(10000));
-```
+### 工具类
 
-## 目录
-
-### 📦 工具函数
-
-* Array
-
-🔖 | 🔖 | 🔖 | 🔖
---- | --- | --- | ---
-[arrayToObject](#arrayToObject) | [arrayToTree](#arrayToTree) | [assign](#assign) | [assign](#assign)
-
-## API
-
-### arrayToObject
-
-将数组转换为对象
-
-### arrayToTree
-
-将数组转换为树
-
-
-### numberToChinese
-
-> 数字转中文工具方法 `numberToChinese(number: number): string`
-
-* 引入版本
-
-0.0.1
-
-* 参数
-
-number(number): 需要转换的数字
-
-* 返回值
-
-(string): 转换后的文本
-
-* 例子
-
-
-```
-numberToChinese(1);
-// => 一
-```
+|函数名称|引入版本|描述|
+|--|--|--|
+|ArabicChinese|v0.4.0|阿拉伯数字与中文转换|
 
 ## 按需加载
 
