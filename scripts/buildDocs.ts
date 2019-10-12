@@ -106,8 +106,8 @@ async function main() {
               brief => {
                 const apiUrl = (
                   Number(kind) === ReflectionKind.Class
-                    ? `https://alitajs.github.io/autils/autils/classes/${brief.name.toLowerCase()}.html`
-                    : `https://alitajs.github.io/autils/autils/globals.html#${brief.name.toLowerCase()}`
+                    ? `https://alitajs.github.io/autils/classes/${brief.name.toLowerCase()}.html`
+                    : `https://alitajs.github.io/autils/globals.html#${brief.name.toLowerCase()}`
                 );
                 const description = brief.body.split('\n')[0];
                 return dedent`

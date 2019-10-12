@@ -18,13 +18,16 @@
     "lint": "walrus lint",
     "test": "walrus test",
     "build": "lotus-tools build",
-    "docs": "ts-node scripts/buildDocs.ts"
+    "docs": "ts-node scripts/buildDocs.ts",
+    "predeploy": "yarn docs",
+    "deploy": "gh-pages -d .typedoc"
   },
   "devDependencies": {
     "@lotus-ui/tools": "^0.2.5",
     "@types/qs": "^6.5.3",
     "@types/shelljs": "^0.8.5",
     "@walrus/cli": "^0.0.6",
+    "gh-pages": "^2.1.1",
     "qs": "^6.7.0",
     "shelljs": "^0.8.3",
     "ts-node": "^8.4.1",
