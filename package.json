@@ -15,14 +15,20 @@
   ],
   "scripts": {
     "bootstrap": "yarn || npm i",
+    "lint": "walrus lint",
+    "test": "walrus test",
     "build": "lotus-tools build",
-    "test": "walrus test"
+    "docs": "ts-node scripts/buildDocs.ts"
   },
   "devDependencies": {
     "@lotus-ui/tools": "^0.2.5",
     "@types/qs": "^6.5.3",
+    "@types/shelljs": "^0.8.5",
     "@walrus/cli": "^0.0.6",
     "qs": "^6.7.0",
+    "shelljs": "^0.8.3",
+    "ts-node": "^8.4.1",
+    "typedoc": "^0.15.0",
     "typescript": "^3.4.5"
   },
   "publishConfig": {

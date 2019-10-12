@@ -1,4 +1,4 @@
-import nativeRound from './utils/native-round';
+import nativeRound from './.internal/nativeRound';
 
 export type IRoundType = 'default' | 'down' | 'up';
 
