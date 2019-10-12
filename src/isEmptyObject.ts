@@ -1,4 +1,4 @@
-import isArray from './is-array';
+import isArray from './isArray';
 
 /**
  * 检查 `obj` 是否是一个空对象

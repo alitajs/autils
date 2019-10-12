@@ -1,4 +1,4 @@
-import { getType } from './get-type';
+import getType from './getType';
 
 /**
  * 检查 `value` 是否是一个正则对象。

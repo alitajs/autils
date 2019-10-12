@@ -1,4 +1,4 @@
-import isPromise from '@/is-promise';
+import { isPromise } from '@/index';
 
 describe('isPromise', () => {
   it('test number', () => {

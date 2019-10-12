@@ -1,4 +1,4 @@
-import arrayToTree from '@/array-to-tree';
+import { arrayToTree } from '@/index';
 
 const data = [
   { id: 1, parentId: 0, name: 'node1' },

@@ -1,4 +1,4 @@
-import isNumber from '@/is-number';
+import { isNumber } from '@/index';
 
 describe('isNumber', () => {
   it('should return `true` for numbers', function() {

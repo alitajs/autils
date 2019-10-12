@@ -1,46 +1,46 @@
 // Array
-export { default as arrayToObject } from './array-to-object';
-export { default as arrayToTree } from './array-to-tree';
+export { default as arrayToObject } from './arrayToObject';
+export { default as arrayToTree } from './arrayToTree';
 
 // Lang
-export { default as isArray } from './is-array';
-export { default as isBoolean } from './is-boolean';
-export { default as isDate } from './is-date';
-export { default as isEmail } from './is-email';
-export { default as isEmptyObject } from './is-empty-object';
-export { default as isFunction } from './is-function';
-export { default as isIdCard } from './is-id-card';
-export { default as isInteger } from './is-integer';
-export { default as isNan } from './is-nan';
-export { default as isNegativeInteger } from './is-negative-integer';
-export { default as isNil } from './is-nil';
-export { default as isNull } from './is-null';
-export { default as isNumber } from './is-number';
-export { default as isObject } from './is-object';
-export { default as isPhone } from './is-phone';
-export { default as isPromise } from './is-promise';
-export { default as isRegexp } from './is-regexp';
-export { default as isString } from './is-string';
-export { default as isUndefined } from './is-undefined';
-export { default as isUrl } from './is-url';
+export { default as isArray } from './isArray';
+export { default as isBoolean } from './isBoolean';
+export { default as isDate } from './isDate';
+export { default as isEmail } from './isEmail';
+export { default as isEmptyObject } from './isEmptyObject';
+export { default as isFunction } from './isFunction';
+export { default as isIdCard } from './isIdCard';
+export { default as isInteger } from './isInteger';
+export { default as isNaN } from './isNaN';
+export { default as isNegativeInteger } from './isNegativeInteger';
+export { default as isNil } from './isNil';
+export { default as isNull } from './isNull';
+export { default as isNumber } from './isNumber';
+export { default as isObject } from './isObject';
+export { default as isPhone } from './isPhone';
+export { default as isPromise } from './isPromise';
+export { default as isRegexp } from './isRegexp';
+export { default as isString } from './isString';
+export { default as isUndefined } from './isUndefined';
+export { default as isUrl } from './isUrl';
 
 // url utils
-export { default as urlToList } from './url-to-list';
+export { default as urlToList } from './urlToList';
 
 // 工具类
-export { default as Policy } from './policy';
-export { default as ArabicChinese } from './arabicChinese';
+export { default as Policy } from './Policy';
+export { default as ArabicChinese } from './ArabicChinese';
 
 // Math
 export { default as round } from './round';
 
 // Regexp
-export { default as urlRegex } from './url-regexp';
-export { default as emailRegexp } from './email-regexp';
-export { default as phoneRegexp } from './phone-regexp';
-export { default as idCardRegexp } from './id-card-regexp';
+export { default as urlRegexp } from './urlRegexp';
+export { default as emailRegexp } from './emailRegexp';
+export { default as phoneRegexp } from './phoneRegexp';
+export { default as idCardRegexp } from './idCardRegexp';
 
 // Utils
-export { default as deepClone } from './deep-clone';
-export { getType } from './get-type';
-export { default as groupBy } from './group-by';
+export { default as deepClone } from './deepClone';
+export { default as getType } from './getType';
+export { default as groupBy } from './groupBy';

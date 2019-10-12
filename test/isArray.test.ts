@@ -1,4 +1,4 @@
-import isArray from '@/is-array';
+import { isArray } from '@/index';
 
 describe('isArray', () => {
   it('should return `true` for arrays', function() {

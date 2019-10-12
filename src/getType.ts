@@ -1,4 +1,4 @@
-import { TLiteralUnion } from './interface';
+import { TLiteralUnion } from './enhanceType';
 
 export type TGetTypeReturn = TLiteralUnion<(
   'Undefined' |
@@ -32,6 +32,6 @@ export type TGetTypeReturn = TLiteralUnion<(
  * getType(1) // => 'Number'
  * getType(true) // => 'Boolean'
  */
-export function getType(value: any): TGetTypeReturn {
+export default function getType(value: any): TGetTypeReturn {
   return Object.prototype.toString.call(value).slice(8, -1)
 }

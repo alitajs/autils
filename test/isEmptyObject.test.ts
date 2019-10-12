@@ -1,4 +1,4 @@
-import isEmptyObject from '@/is-empty-object';
+import { isEmptyObject } from '@/index';
 
 describe('isEmptyObject', () => {
   it('should return `true` for empty object', function() {

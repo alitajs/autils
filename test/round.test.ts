@@ -1,4 +1,4 @@
-import round from '@/round';
+import { round } from '@/index';
 
 describe('round', () => {
   describe('round default type', () => {

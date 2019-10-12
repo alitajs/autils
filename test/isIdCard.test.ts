@@ -1,4 +1,4 @@
-import isIdCard from '@/is-id-card';
+import { isIdCard } from '@/index';
 
 describe('isIdCard', () => {
   it('test 142701199203224545', () => {

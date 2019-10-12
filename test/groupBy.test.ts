@@ -1,4 +1,5 @@
-import groupBy from '@/group-by';
+import { groupBy } from '@/index';
+
 
 const users = [
   { id: 1, name: 'Jay', age: 20 },

@@ -1,4 +1,4 @@
-import deepClone from '@/deep-clone';
+import { deepClone } from '@/index';
 
 describe('deepClone', () => {
   it('test number', () => {

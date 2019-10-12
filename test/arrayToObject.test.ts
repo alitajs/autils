@@ -1,4 +1,4 @@
-import arrayToObject from '@/array-to-object';
+import { arrayToObject } from '@/index';
 
 describe('arrayToObject', () => {
   it('test success', () => {
