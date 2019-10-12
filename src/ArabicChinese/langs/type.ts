@@ -1,3 +1,7 @@
+/**
+ * @ignore
+ * ArabicChinese 语言类型
+ */
 export interface ILang {
   // 单个数字集合
   digits: string;

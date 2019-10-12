@@ -7,6 +7,7 @@ import { ILang } from './langs/type';
 import { defaultOptions, IOptions } from './config';
 
 /**
+ * @ignore
  * 阿拉伯数字转中文数字
  * @param num 阿拉伯数字/字符串, 科学记数法字符串
  * @param lang 阿拉伯数字/字符串, 科学记数法字符串

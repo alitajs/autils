@@ -1,3 +1,5 @@
+// @index(['./*', '!./_*', '!./typings.d.ts', '!./*.test.ts'], pp => `export * from '${pp.path}'`)
+
 // Array
 export { default as arrayToObject } from './arrayToObject';
 export { default as arrayToTree } from './arrayToTree';
@@ -44,6 +46,9 @@ export { default as idCardRegexp } from './idCardRegexp';
 export { default as deepClone } from './deepClone';
 export { default as getType } from './getType';
 export { default as groupBy } from './groupBy';
+export { default as forOwn } from './forOwn';
+export * from './dedent';
+export { default as indent } from './indent';
 
 // 常用的类型定义
 export * from './enhanceType'

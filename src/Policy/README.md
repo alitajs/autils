@@ -15,7 +15,7 @@ const actions = [
   { module: 'module2', action: 'action2' },
 ]
 
-const policy = new Policy();
+const policy = new Policy(actions);
 
 policy.addPolicy({
   version: 1,

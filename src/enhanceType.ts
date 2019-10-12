@@ -1,4 +1,14 @@
 /**
+ * 任意函数类型。
+ */
+export type AnyFunction = (...args: any[]) => any
+
+/**
+ * 任意对象类型。
+ */
+export type AnyObject = Record<keyof any, any>
+
+/**
  * 名义化类型。
  *
  * @example
@@ -16,3 +26,19 @@ export type TBrand<T, B> = T & { __kind__?: B }
  * 字面量联合类型
  */
 export type TLiteralUnion<L, B> = L | TBrand<B, never>
+
+/**
+ * 从 `T` 中排除 `undefined` 类型。
+ *
+ * @example
+ * ```ts
+ * interface User {
+ *   gender?: 'male' | 'female',
+ * }
+ * // before
+ * type UserGender = Exclude<User['gender'], undefined>
+ * // after
+ * type UserGender = Defined<User['gender']>
+ * ```
+ */
+export type Defined<T> = Exclude<T, undefined>

@@ -4,6 +4,12 @@ import { defaultOptions, IOptions } from './config';
 import cnb from './langs/cn-b';
 import hkb from './langs/hk-b';
 
+/**
+ * @ignore
+ * 阿拉伯数字转金额
+ * @param num
+ * @param options
+ */
 export default function toMoney(
   num: string | number,
   options?: IOptions

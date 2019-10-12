@@ -1,15 +1,27 @@
-import isString from '../is-string';
-import isArray from '../is-array';
+import isString from '../isString';
+import isArray from '../isArray';
 
+/**
+ * @ignore
+ * 模块的操作集合
+ */
 export interface IModuleAction {
   [module: string]: string[]
 }
 
+/**
+ * @ignore
+ * 操作类型
+ */
 export interface IAction {
   module: string;
   action: string;
 }
 
+/**
+ * @ignore
+ * 授权语句
+ */
 export interface IStatement {
   // 授权效力 allow: 允许 deny: 禁止
   effect: 'allow' | 'deny';
@@ -17,12 +29,48 @@ export interface IStatement {
   action: '*' | string[];
 }
 
+/**
+ * @ignore
+ * 权限策略
+ */
 export interface IPolicyData {
   version: string | number;
   statement: IStatement[]
 }
 
-export default class Index {
+/**
+ * 权限策略
+ *
+ * @example
+ * ```js
+ * const policy = new Policy();
+ *
+ * const actions = [
+ *   { module: 'module1', action: 'action1' },
+ *   { module: 'module1', action: 'action2' },
+ *   { module: 'module1', action: 'action3' },
+ *   { module: 'module2', action: 'action1' },
+ *   { module: 'module2', action: 'action2' }
+ * ];
+ *
+ * policy.addPolicy({
+ *  version: 1,
+ *  statement: [
+ *    {
+ *      effect: 'allow',
+ *      action: [
+ *        'module1/*'
+ *      ]
+ *    }
+ *  ]
+ * });
+ *
+ * policy.singleVerify('module1/action1');
+ *
+ * // >> true
+ * ```
+ * */
+export default class Policy {
   private readonly separator: string;
   public moduleMap: IModuleAction = {};
   public allowActions: string[];

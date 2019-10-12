@@ -1,4 +1,4 @@
-import isNil from '../is-nil';
+import isNil from '../isNil';
 import { IOptions } from './config';
 import { ILang } from './langs/type';
 
@@ -17,6 +17,7 @@ export interface INumberResult {
 }
 
 /**
+ * @ignore
  * 将科学计数法转换为十进制
  * @param number
  * @example
@@ -78,6 +79,7 @@ export function e2ten(number: string) {
 }
 
 /**
+ * @ignore
  * 解析数字字符串
  * @param number
  */
@@ -101,6 +103,7 @@ export function getNumberResult(
 }
 
 /**
+ * @ignore
  * 数组归一 (按索引覆盖合并数组,并清空被合并的数组)
  * 注意: 会改变被操作的数组
  * @param baseArr
@@ -114,6 +117,7 @@ export function centerArray<T>(
 }
 
 /**
+ * @ignore
  * 检查key是否是对像的属性 (非原型链)
  * @param obj
  * @param key
@@ -126,6 +130,7 @@ export function hasOwn(
 }
 
 /**
+ * @ignore
  * 获取中文单位的真实数位
  * @param index
  */
@@ -136,6 +141,7 @@ export function getDigit(
 }
 
 /**
+ * @ignore
  * 向数组头部插入0
  * @param arr 需要操作的数组
  * @param num 插入零的数量 默认1
@@ -154,6 +160,7 @@ export function unshiftZero(
 }
 
 /**
+ * @ignore
  * 清除字符串中多余的零
  * @param str 需要处理的字符串
  * @param zero 零字符
@@ -188,6 +195,7 @@ export function clearZero(
 }
 
 /**
+ * @ignore
  * 转换整数
  * @param integer 需要转换的整数
  * @param options 转换配置

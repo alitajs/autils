@@ -2,6 +2,7 @@ import { unshiftZero, getDigit, centerArray } from './utils';
 import { ILang } from './langs/type';
 
 /**
+ * @ignore
  * 中文数字转阿拉伯数字
  * @param zhNum
  * @param lang
