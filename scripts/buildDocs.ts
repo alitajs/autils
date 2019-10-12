@@ -101,7 +101,7 @@ async function main() {
       readme = readme
         .replace(
           new RegExp(`(<!-- ${readMeFlagByKind[kind]}!目录 -->).+?(<!-- ${readMeFlagByKind[kind]}i目录 -->)`, 's'),
-          `$1\n###${readMeFlagByKind[kind]}\n${
+          `$1\n### ${readMeFlagByKind[kind]}\n${
             briefList.map(
               brief => {
                 const apiUrl = (
@@ -144,6 +144,7 @@ function getDesc(reflection: Reflection): string {
     .join('\n\n')
 }
 
+// @ts-ignore
 function getExample(reflection: Reflection): string {
   const example = ((reflection.comment && reflection.comment.tags) || []).find(
     item => (item as any).tag === 'example',

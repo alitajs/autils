@@ -31,13 +31,13 @@ yarn add @alitajs/autils
 ## 📝 目录
 
 <!-- 工具类!目录 -->
-###工具类
+### 工具类
 * [ArabicChinese](https://alitajs.github.io/autils/autils/classes/arabicchinese.html) 阿拉伯数字和中文数字互转
 * [Policy](https://alitajs.github.io/autils/autils/classes/policy.html) 权限策略
 <!-- 工具类i目录 -->
 
 <!-- 工具函数!目录 -->
-###工具函数
+### 工具函数
 * [arrayToObject](https://alitajs.github.io/autils/autils/globals.html#arraytoobject) 转换数组为对象
 * [arrayToTree](https://alitajs.github.io/autils/autils/globals.html#arraytotree) 将数组转换为树形结构数据
 * [dedent](https://alitajs.github.io/autils/autils/globals.html#dedent) 首先，每一行紧跟前导空白的插入值为多行时，保持缩进。
