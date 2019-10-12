@@ -3,6 +3,7 @@ import { IOptions, defaultOptions } from './config';
 import cns from './langs/cn-s';
 import hks from './langs/hk-s';
 import numberToChinese from './numberToChinese';
+import chineseToNumber from './chineseToNumber';
 import toMoney from './toMoney';
 
 class ArabicChinese {
@@ -23,7 +24,6 @@ class ArabicChinese {
     num: string | number,
     options?: IOptions
   ): string => {
-    if (!num) return num.toString();
     const _options = Object.assign({}, this.options, options);
     const lang = _options.lang === 'cn' ? cns : hks;
     return numberToChinese(num, lang, _options);
@@ -34,9 +34,11 @@ class ArabicChinese {
    * @param zhNum
    * @param options
    */
-  decode = (zhNum: string, options?: IOptions): string => {
+  decode = (zhNum: string, options?: IOptions): number => {
     if (!isString(zhNum)) return zhNum;
-
+    const _options = Object.assign({}, this.options, options);
+    const lang = _options.lang === 'cn' ? cns : hks;
+    return chineseToNumber(zhNum, lang);
   };
 
   /**

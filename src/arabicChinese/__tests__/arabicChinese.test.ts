@@ -50,3 +50,19 @@ describe('arabicChinese encode', () => {
     });
   });
 });
+
+describe('arabicChinese decode', () => {
+  const arabicChinese = new ArabicChinese();
+
+  it('整数', () => {
+    testData.forEach((item) => {
+      expect(arabicChinese.decode(item[1])).toEqual(+item[0]);
+    });
+  });
+
+  it('有小数', () => {
+    testData1.forEach((item) => {
+      expect(arabicChinese.decode(item[1])).toEqual(+item[0]);
+    });
+  });
+});
