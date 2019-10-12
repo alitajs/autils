@@ -44,3 +44,6 @@ export { default as idCardRegexp } from './idCardRegexp';
 export { default as deepClone } from './deepClone';
 export { default as getType } from './getType';
 export { default as groupBy } from './groupBy';
+
+// 常用的类型定义
+export * from './enhanceType'
