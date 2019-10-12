@@ -27,8 +27,9 @@ export { default as isUrl } from './is-url';
 // url utils
 export { default as urlToList } from './url-to-list';
 
-// Class
+// 工具类
 export { default as Policy } from './policy';
+export { default as ArabicChinese } from './arabicChinese';
 
 // Math
 export { default as round } from './round';
