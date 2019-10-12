@@ -15,8 +15,9 @@
   ],
   "scripts": {
     "bootstrap": "yarn || npm i",
-    "build": "lotus-tools build",
-    "test": "walrus test"
+    "lint": "walrus lint",
+    "test": "walrus test",
+    "build": "lotus-tools build"
   },
   "devDependencies": {
     "@lotus-ui/tools": "^0.2.5",
