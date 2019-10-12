@@ -33,7 +33,7 @@ yarn add @alitajs/autils
 
 |函数名称|引入版本|描述|
 |--|--|--|
-|isNull|v0.0.6|判断值是否为空|
+|isNull|v0.0.6|检查 value 是否是为`null`|
 
 ### 工具类
 
