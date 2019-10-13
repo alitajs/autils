@@ -2390,10 +2390,25 @@ img {
 			<a href="interfaces/groupbyiterator.html" class="tsd-kind-icon">Group<wbr>ByIterator</a>
 		</li>
 		<li class=" tsd-kind-interface tsd-is-external">
+			<a href="interfaces/iaction.html" class="tsd-kind-icon">IAction</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-is-external">
 			<a href="interfaces/iarraytotreeoptions.html" class="tsd-kind-icon">IArray<wbr>ToTree<wbr>Options</a>
 		</li>
 		<li class=" tsd-kind-interface tsd-is-external">
+			<a href="interfaces/ilang.html" class="tsd-kind-icon">ILang</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-is-external">
+			<a href="interfaces/imoduleaction.html" class="tsd-kind-icon">IModule<wbr>Action</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-is-external">
 			<a href="interfaces/inumberresult.html" class="tsd-kind-icon">INumber<wbr>Result</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-is-external">
+			<a href="interfaces/ipolicydata.html" class="tsd-kind-icon">IPolicy<wbr>Data</a>
+		</li>
+		<li class=" tsd-kind-interface tsd-is-external">
+			<a href="interfaces/istatement.html" class="tsd-kind-icon">IStatement</a>
 		</li>
 		<li class=" tsd-kind-type-alias tsd-is-external">
 			<a href="globals.html#anyfunction" class="tsd-kind-icon">Any<wbr>Function</a>
@@ -2544,7 +2559,7 @@ img {
 			</a>
 			<ul>
 				<li><a href="https://alitajs.github.io/autils/classes/arabicchinese.html">ArabicChinese</a> 阿拉伯数字和中文数字互转</li>
-				<li><a href="https://alitajs.github.io/autils/classes/policy.html">Policy</a> 权限策略<!-- 工具类i目录 -->
+				<li><a href="https://alitajs.github.io/autils/classes/policy.html">Policy</a> 解析权限策略，并提供验证功能<!-- 工具类i目录 -->
 				</li>
 			</ul>
 			<!-- 工具函数!目录 -->
@@ -2554,11 +2569,11 @@ img {
 			<ul>
 				<li><a href="https://alitajs.github.io/autils/globals.html#arraytoobject">arrayToObject</a> 转换数组为对象</li>
 				<li><a href="https://alitajs.github.io/autils/globals.html#arraytotree">arrayToTree</a> 将数组转换为树形结构数据</li>
-				<li><a href="https://alitajs.github.io/autils/globals.html#dedent">dedent</a> 首先，每一行紧跟前导空白的插入值为多行时，保持缩进。</li>
+				<li><a href="https://alitajs.github.io/autils/globals.html#dedent">dedent</a> 每一行紧跟前导空白的插入值，为多行时，保持缩进。并移除每一行的公共前导空白。</li>
 				<li><a href="https://alitajs.github.io/autils/globals.html#deepclone">deepClone</a> 深拷贝</li>
 				<li><a href="https://alitajs.github.io/autils/globals.html#forown">forOwn</a> 遍历对象的可枚举属性。若遍历函数返回 <code>false</code>，遍历会提前退出。</li>
 				<li><a href="https://alitajs.github.io/autils/globals.html#gettype">getType</a> 检测 <code>value</code> 的类型</li>
-				<li><a href="https://alitajs.github.io/autils/globals.html#groupby">groupBy</a> </li>
+				<li><a href="https://alitajs.github.io/autils/globals.html#groupby">groupBy</a> 根据迭代函数返回的值对 <code>data</code> 进行分组。</li>
 				<li><a href="https://alitajs.github.io/autils/globals.html#indent">indent</a> 每一行紧跟前导空白的插入值为多行时，保持缩进。</li>
 				<li><a href="https://alitajs.github.io/autils/globals.html#isarray">isArray</a> 检查 <code>value</code> 是否是一个数组</li>
 				<li><a href="https://alitajs.github.io/autils/globals.html#isboolean">isBoolean</a> 检查 <code>value</code> 是否是一个布尔值。</li>
@@ -2566,7 +2581,7 @@ img {
 				<li><a href="https://alitajs.github.io/autils/globals.html#isemail">isEmail</a> 检查<code>value</code>是否为邮箱。</li>
 				<li><a href="https://alitajs.github.io/autils/globals.html#isemptyobject">isEmptyObject</a> 检查 <code>obj</code> 是否是一个空对象</li>
 				<li><a href="https://alitajs.github.io/autils/globals.html#isfunction">isFunction</a> 检查 <code>value</code> 是否是一个函数</li>
-				<li><a href="https://alitajs.github.io/autils/globals.html#isidcard">isIdCard</a> </li>
+				<li><a href="https://alitajs.github.io/autils/globals.html#isidcard">isIdCard</a> 检查 <code>value</code> 是否是一个身份证号</li>
 				<li><a href="https://alitajs.github.io/autils/globals.html#isinteger">isInteger</a> 检查 <code>value</code> 是否是一个整数。</li>
 				<li><a href="https://alitajs.github.io/autils/globals.html#isnan">isNaN</a> 检查 <code>value</code> 是否是 <code>NaN</code>。</li>
 				<li><a href="https://alitajs.github.io/autils/globals.html#isnegativeinteger">isNegativeInteger</a> 检查 <code>value</code> 是否是一个负整数</li>
@@ -2579,7 +2594,7 @@ img {
 				<li><a href="https://alitajs.github.io/autils/globals.html#isregexp">isRegExp</a> 检查 <code>value</code> 是否是一个正则对象。</li>
 				<li><a href="https://alitajs.github.io/autils/globals.html#isstring">isString</a> 检查 <code>value</code> 是否是一个字符串</li>
 				<li><a href="https://alitajs.github.io/autils/globals.html#isundefined">isUndefined</a> 检查 <code>value</code> 是否等于 <code>undefined</code>。</li>
-				<li><a href="https://alitajs.github.io/autils/globals.html#isurl">isUrl</a> </li>
+				<li><a href="https://alitajs.github.io/autils/globals.html#isurl">isUrl</a> 检查 <code>value</code> 是否是一个Url</li>
 				<li><a href="https://alitajs.github.io/autils/globals.html#urltolist">urlToList</a> 转换url为数组<!-- 工具函数i目录 -->
 				</li>
 			</ul>
@@ -2601,8 +2616,13 @@ img {
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-interface tsd-has-type-parameter tsd-is-external"><a href="interfaces/forowntraverse.html" class="tsd-kind-icon">For<wbr>Own<wbr>Traverse</a></li>
 							<li class="tsd-kind-interface tsd-has-type-parameter tsd-is-external"><a href="interfaces/groupbyiterator.html" class="tsd-kind-icon">Group<wbr>ByIterator</a></li>
+							<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/iaction.html" class="tsd-kind-icon">IAction</a></li>
 							<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/iarraytotreeoptions.html" class="tsd-kind-icon">IArray<wbr>ToTree<wbr>Options</a></li>
+							<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/ilang.html" class="tsd-kind-icon">ILang</a></li>
+							<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/imoduleaction.html" class="tsd-kind-icon">IModule<wbr>Action</a></li>
 							<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/inumberresult.html" class="tsd-kind-icon">INumber<wbr>Result</a></li>
+							<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/ipolicydata.html" class="tsd-kind-icon">IPolicy<wbr>Data</a></li>
+							<li class="tsd-kind-interface tsd-is-external"><a href="interfaces/istatement.html" class="tsd-kind-icon">IStatement</a></li>
 						</ul>
 					</section>
 					<section class="tsd-index-section tsd-is-external">
@@ -2668,7 +2688,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Any<wbr>Function<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/enhanceType.ts#L4">enhanceType.ts:4</a></li>
+						<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/enhanceType.ts#L4">enhanceType.ts:4</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -2704,7 +2724,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Any<wbr>Object<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">keyof any</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/enhanceType.ts#L9">enhanceType.ts:9</a></li>
+						<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/enhanceType.ts#L9">enhanceType.ts:9</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -2719,7 +2739,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Defined&lt;T&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Exclude</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/enhanceType.ts#L44">enhanceType.ts:44</a></li>
+						<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/enhanceType.ts#L44">enhanceType.ts:44</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -2751,7 +2771,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">IRound<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"default"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"down"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"up"</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/round.ts#L3">round.ts:3</a></li>
+						<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/round.ts#L3">round.ts:3</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -2761,7 +2781,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">TBrand&lt;T, B&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol"> &amp; </span><span class="tsd-signature-type">object</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/enhanceType.ts#L23">enhanceType.ts:23</a></li>
+						<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/enhanceType.ts#L23">enhanceType.ts:23</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -2794,7 +2814,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">TGet<wbr>Type<wbr>Return<span class="tsd-signature-symbol">:</span> <a href="globals.html#tliteralunion" class="tsd-signature-type">TLiteralUnion</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">"Undefined"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Null"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Array"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"String"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Arguments"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Function"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Error"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Boolean"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Number"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Date"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"RegExp"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Object"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"JSON"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Math"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Symbol"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Map"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"Set"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"WeakMap"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"WeakSet"</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/getType.ts#L3">getType.ts:3</a></li>
+						<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/getType.ts#L3">getType.ts:3</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -2804,7 +2824,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">TLiteral<wbr>Union&lt;L, B&gt;<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">L</span><span class="tsd-signature-symbol"> | </span><a href="globals.html#tbrand" class="tsd-signature-type">TBrand</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">B</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">never</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/enhanceType.ts#L28">enhanceType.ts:28</a></li>
+						<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/enhanceType.ts#L28">enhanceType.ts:28</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -2835,7 +2855,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/arrayToObject.ts#L7">arrayToObject.ts:7</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/arrayToObject.ts#L7">arrayToObject.ts:7</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2872,7 +2892,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/arrayToTree.ts#L76">arrayToTree.ts:76</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/arrayToTree.ts#L94">arrayToTree.ts:94</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2883,18 +2903,20 @@ img {
 								<dt>since</dt>
 								<dd><p>0.0.6</p>
 								</dd>
-								<dt>example</dt>
-								<dd></dd>
 							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
 								<h5>list: <span class="tsd-signature-type">IItem</span><span class="tsd-signature-symbol">[]</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>需要转换为树的数字</p>
+								</div>
 							</li>
 							<li>
 								<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <a href="interfaces/iarraytotreeoptions.html" class="tsd-signature-type">IArrayToTreeOptions</a></h5>
 								<div class="tsd-comment tsd-typography">
+									<p>转换配置</p>
 								</div>
 							</li>
 						</ul>
@@ -2913,14 +2935,13 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/dedent.ts#L21">dedent.ts:21</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/dedent.ts#L19">dedent.ts:19</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
-								<p>首先，每一行紧跟前导空白的插入值为多行时，保持缩进。</p>
+								<p>每一行紧跟前导空白的插入值，为多行时，保持缩进。并移除每一行的公共前导空白。</p>
 							</div>
-							<p>然后，移除每一行的公共前导空白。</p>
 							<dl class="tsd-comment-tags">
 								<dt>example</dt>
 								<dd><pre><code class="language-ts"><span class="hljs-keyword">const</span> text = <span class="hljs-string">'hello\nworld'</span>
@@ -2952,7 +2973,7 @@ dedent<span class="hljs-string">`
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/dedent.ts#L37">dedent.ts:37</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/dedent.ts#L35">dedent.ts:35</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2993,7 +3014,7 @@ dedent<span class="hljs-string">`
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/deepClone.ts#L8">deepClone.ts:8</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/deepClone.ts#L9">deepClone.ts:9</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3023,7 +3044,7 @@ dedent<span class="hljs-string">`
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/forOwn.ts#L35">forOwn.ts:35</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/forOwn.ts#L35">forOwn.ts:35</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3080,7 +3101,7 @@ dedent<span class="hljs-string">`
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/getType.ts#L35">getType.ts:35</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/getType.ts#L37">getType.ts:37</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3092,8 +3113,8 @@ dedent<span class="hljs-string">`
 								<dd><p>0.1.1</p>
 								</dd>
 								<dt>example</dt>
-								<dd><p>getType(1) // =&gt; &#39;Number&#39;
-									getType(true) // =&gt; &#39;Boolean&#39;</p>
+								<dd><pre><code class="language-ts"> getType(<span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; 'Number'</span>
+ getType(<span class="hljs-literal">true</span>) <span class="hljs-comment">// =&gt; 'Boolean'</span></code></pre>
 								</dd>
 							</dl>
 						</div>
@@ -3121,9 +3142,35 @@ dedent<span class="hljs-string">`
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/groupBy.ts#L5">groupBy.ts:5</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/groupBy.ts#L40">groupBy.ts:40</a></li>
 							</ul>
 						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>根据迭代函数返回的值对 <code>data</code> 进行分组。</p>
+							</div>
+							<dl class="tsd-comment-tags">
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">* groupBy(
+  [
+    { <span class="hljs-keyword">module</span>: 'module1', action: 'action1' },
+    { <span class="hljs-keyword">module</span>: 'module1', action: 'action2' },
+    { <span class="hljs-keyword">module</span>: 'module2', action: 'action1' }
+  ],
+  item =&gt; item.type,
+)
+// =&gt; {
+<span class="hljs-comment">// =&gt;   module1: [</span>
+<span class="hljs-comment">// =&gt;     { module: 'module1', action: 'action1' },</span>
+<span class="hljs-comment">// =&gt;     { module: 'module1', action: 'action2' },</span>
+<span class="hljs-comment">// =&gt;   ],</span>
+<span class="hljs-comment">// =&gt;   module2: [</span>
+<span class="hljs-comment">// =&gt;     { module: 'module2', action: 'action1' }</span>
+<span class="hljs-comment">// =&gt;   ]</span>
+<span class="hljs-comment">// =&gt; }</span></code></pre>
+								</dd>
+							</dl>
+						</div>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
 						<ul class="tsd-type-parameters">
 							<li>
@@ -3137,12 +3184,19 @@ dedent<span class="hljs-string">`
 						<ul class="tsd-parameters">
 							<li>
 								<h5>data: <span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">[]</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>要分组的数据</p>
+								</div>
 							</li>
 							<li>
 								<h5>iterator: <a href="interfaces/groupbyiterator.html" class="tsd-signature-type">GroupByIterator</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">K</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>迭代函数</p>
+								</div>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">object</span></h4>
+						<p>返回分组结果</p>
 						<ul class="tsd-parameters">
 						</ul>
 					</li>
@@ -3160,7 +3214,7 @@ dedent<span class="hljs-string">`
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/indent.ts#L16">indent.ts:16</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/indent.ts#L16">indent.ts:16</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3195,7 +3249,7 @@ indent<span class="hljs-string">`  <span class="hljs-subst">${text}</span>`</spa
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/indent.ts#L30">indent.ts:30</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/indent.ts#L30">indent.ts:30</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3230,7 +3284,7 @@ indent<span class="hljs-string">`  <span class="hljs-subst">${text}</span>`</spa
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/indent.ts#L47">indent.ts:47</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/indent.ts#L47">indent.ts:47</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3298,7 +3352,7 @@ indent<span class="hljs-string">`  <span class="hljs-subst">${text}</span>`</spa
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/isArray.ts#L13">isArray.ts:13</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/isArray.ts#L13">isArray.ts:13</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3310,8 +3364,9 @@ indent<span class="hljs-string">`  <span class="hljs-subst">${text}</span>`</spa
 								<dd><p>0.0.6</p>
 								</dd>
 								<dt>example</dt>
-								<dd><pre><code><span class="hljs-function"><span class="hljs-title">isArray</span><span class="hljs-params">([<span class="hljs-string">'x'</span>])</span></span> <span class="hljs-comment">// =&gt; true</span>
-<span class="hljs-function"><span class="hljs-title">isArray</span><span class="hljs-params">(<span class="hljs-string">'x'</span>)</span></span> <span class="hljs-comment">// =&gt; false</span></code></pre></dd>
+								<dd><pre><code class="language-ts">isArray([<span class="hljs-string">'x'</span>]) <span class="hljs-comment">// =&gt; true</span>
+isArray(<span class="hljs-string">'x'</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
+								</dd>
 							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3338,7 +3393,7 @@ indent<span class="hljs-string">`  <span class="hljs-subst">${text}</span>`</spa
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/isBoolean.ts#L14">isBoolean.ts:14</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/isBoolean.ts#L14">isBoolean.ts:14</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3350,9 +3405,10 @@ indent<span class="hljs-string">`  <span class="hljs-subst">${text}</span>`</spa
 								<dd><p>0.0.6</p>
 								</dd>
 								<dt>example</dt>
-								<dd><pre><code><span class="hljs-function"><span class="hljs-title">isBoolean</span><span class="hljs-params">(true)</span></span> <span class="hljs-comment">// =&gt; true</span>
-<span class="hljs-function"><span class="hljs-title">isBoolean</span><span class="hljs-params">(false)</span></span> <span class="hljs-comment">// =&gt; true</span>
-<span class="hljs-function"><span class="hljs-title">isBoolean</span><span class="hljs-params">(<span class="hljs-string">'true'</span>)</span></span> <span class="hljs-comment">// =&gt; false</span></code></pre></dd>
+								<dd><pre><code class="language-ts">isBoolean(<span class="hljs-literal">true</span>) <span class="hljs-comment">// =&gt; true</span>
+isBoolean(<span class="hljs-literal">false</span>) <span class="hljs-comment">// =&gt; true</span>
+isBoolean(<span class="hljs-string">'true'</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
+								</dd>
 							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3379,7 +3435,7 @@ indent<span class="hljs-string">`  <span class="hljs-subst">${text}</span>`</spa
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/isDate.ts#L14">isDate.ts:14</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/isDate.ts#L14">isDate.ts:14</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3391,7 +3447,8 @@ indent<span class="hljs-string">`  <span class="hljs-subst">${text}</span>`</spa
 								<dd><p>0.1.1</p>
 								</dd>
 								<dt>example</dt>
-								<dd><pre><code><span class="hljs-function"><span class="hljs-title">isDate</span><span class="hljs-params">(new Date()</span></span>) <span class="hljs-comment">// =&gt; true</span></code></pre></dd>
+								<dd><pre><code class="language-ts">isDate(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>()) <span class="hljs-comment">// =&gt; true</span></code></pre>
+								</dd>
 							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3418,7 +3475,7 @@ indent<span class="hljs-string">`  <span class="hljs-subst">${text}</span>`</spa
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/isEmail.ts#L17">isEmail.ts:17</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/isEmail.ts#L14">isEmail.ts:14</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3430,11 +3487,8 @@ indent<span class="hljs-string">`  <span class="hljs-subst">${text}</span>`</spa
 								<dd><p>0.0.6</p>
 								</dd>
 								<dt>example</dt>
-								<dd><p>isEmail(&#39;156148999@qq.com&#39;)
-									// =&gt; true</p>
-									<p>isEmail(&#39;wang_xingkang@qq.com&#39;)
-									// =&gt; true</p>
-								</dd>
+								<dd><pre><code><span class="hljs-function"><span class="hljs-title">isEmail</span><span class="hljs-params">(<span class="hljs-string">'156148999@qq.com'</span>)</span></span>
+<span class="hljs-comment">// =&gt; true</span></code></pre></dd>
 							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3457,7 +3511,7 @@ indent<span class="hljs-string">`  <span class="hljs-subst">${text}</span>`</spa
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/isEmptyObject.ts#L15">isEmptyObject.ts:15</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/isEmptyObject.ts#L15">isEmptyObject.ts:15</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3469,8 +3523,9 @@ indent<span class="hljs-string">`  <span class="hljs-subst">${text}</span>`</spa
 								<dd><p>0.1.1</p>
 								</dd>
 								<dt>example</dt>
-								<dd><pre><code><span class="hljs-function"><span class="hljs-title">isEmptyObject</span><span class="hljs-params">({})</span></span> <span class="hljs-comment">// =&gt; true</span>
-<span class="hljs-function"><span class="hljs-title">isFunction</span><span class="hljs-params">({a: <span class="hljs-number">1</span>})</span></span> <span class="hljs-comment">// =&gt; false</span></code></pre></dd>
+								<dd><pre><code class="language-ts">isEmptyObject({}) <span class="hljs-comment">// =&gt; true</span>
+isFunction({a: <span class="hljs-number">1</span>}) <span class="hljs-comment">// =&gt; false</span></code></pre>
+								</dd>
 							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3497,7 +3552,7 @@ indent<span class="hljs-string">`  <span class="hljs-subst">${text}</span>`</spa
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/isFunction.ts#L13">isFunction.ts:13</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/isFunction.ts#L13">isFunction.ts:13</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3509,8 +3564,9 @@ indent<span class="hljs-string">`  <span class="hljs-subst">${text}</span>`</spa
 								<dd><p>0.0.6</p>
 								</dd>
 								<dt>example</dt>
-								<dd><pre><code><span class="hljs-function"><span class="hljs-title">isFunction</span><span class="hljs-params">(()</span></span> =&gt; {}) <span class="hljs-comment">// =&gt; true</span>
-<span class="hljs-function"><span class="hljs-title">isFunction</span><span class="hljs-params">(<span class="hljs-number">2</span>)</span></span> <span class="hljs-comment">// =&gt; false</span></code></pre></dd>
+								<dd><pre><code class="language-ts">isFunction(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {}) <span class="hljs-comment">// =&gt; true</span>
+isFunction(<span class="hljs-number">2</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
+								</dd>
 							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3537,13 +3593,29 @@ indent<span class="hljs-string">`  <span class="hljs-subst">${text}</span>`</spa
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/isIdCard.ts#L3">isIdCard.ts:3</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/isIdCard.ts#L13">isIdCard.ts:13</a></li>
 							</ul>
 						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>检查 <code>value</code> 是否是一个身份证号</p>
+							</div>
+							<dl class="tsd-comment-tags">
+								<dt>since</dt>
+								<dd><p>0.0.6</p>
+								</dd>
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">isIdCard(<span class="hljs-string">'123'</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
+								</dd>
+							</dl>
+						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
 								<h5>value: <span class="tsd-signature-type">any</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>要检查的值</p>
+								</div>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -3560,7 +3632,7 @@ indent<span class="hljs-string">`  <span class="hljs-subst">${text}</span>`</spa
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/isInteger.ts#L14">isInteger.ts:14</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/isInteger.ts#L14">isInteger.ts:14</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3601,7 +3673,7 @@ indent<span class="hljs-string">`  <span class="hljs-subst">${text}</span>`</spa
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/isNaN.ts#L13">isNaN.ts:13</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/isNaN.ts#L13">isNaN.ts:13</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3613,8 +3685,9 @@ indent<span class="hljs-string">`  <span class="hljs-subst">${text}</span>`</spa
 								<dd><p>0.1.1</p>
 								</dd>
 								<dt>example</dt>
-								<dd><pre><code><span class="hljs-function"><span class="hljs-title">isNaN</span><span class="hljs-params">(NaN)</span></span> <span class="hljs-comment">// =&gt; true</span>
-<span class="hljs-function"><span class="hljs-title">isNaN</span><span class="hljs-params">(<span class="hljs-number">2</span>)</span></span> <span class="hljs-comment">// =&gt; false</span></code></pre></dd>
+								<dd><pre><code class="language-ts"><span class="hljs-built_in">isNaN</span>(<span class="hljs-literal">NaN</span>) <span class="hljs-comment">// =&gt; true</span>
+<span class="hljs-built_in">isNaN</span>(<span class="hljs-number">2</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
+								</dd>
 							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3641,7 +3714,7 @@ indent<span class="hljs-string">`  <span class="hljs-subst">${text}</span>`</spa
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/isNegativeInteger.ts#L15">isNegativeInteger.ts:15</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/isNegativeInteger.ts#L15">isNegativeInteger.ts:15</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3653,8 +3726,9 @@ indent<span class="hljs-string">`  <span class="hljs-subst">${text}</span>`</spa
 								<dd><p>0.1.1</p>
 								</dd>
 								<dt>example</dt>
-								<dd><pre><code><span class="hljs-function"><span class="hljs-title">isNegativeInteger</span><span class="hljs-params">(-<span class="hljs-number">1</span>)</span></span> <span class="hljs-comment">// =&gt; true</span>
-<span class="hljs-function"><span class="hljs-title">isNegativeInteger</span><span class="hljs-params">(<span class="hljs-number">1</span>)</span></span> <span class="hljs-comment">// =&gt; false</span></code></pre></dd>
+								<dd><pre><code class="language-ts">isNegativeInteger(<span class="hljs-number">-1</span>) <span class="hljs-comment">// =&gt; true</span>
+isNegativeInteger(<span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
+								</dd>
 							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3681,7 +3755,7 @@ indent<span class="hljs-string">`  <span class="hljs-subst">${text}</span>`</spa
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/isNil.ts#L13">isNil.ts:13</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/isNil.ts#L13">isNil.ts:13</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3722,7 +3796,7 @@ isNil(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">//
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/isNull.ts#L12">isNull.ts:12</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/isNull.ts#L12">isNull.ts:12</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3762,7 +3836,7 @@ isNil(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">//
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/isNumber.ts#L15">isNumber.ts:15</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/isNumber.ts#L15">isNumber.ts:15</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3774,10 +3848,11 @@ isNil(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">//
 								<dd><p>0.1.1</p>
 								</dd>
 								<dt>example</dt>
-								<dd><pre><code><span class="hljs-function"><span class="hljs-title">isNumber</span><span class="hljs-params">(<span class="hljs-number">1</span>)</span></span> <span class="hljs-comment">// =&gt; true</span>
-<span class="hljs-function"><span class="hljs-title">isNumber</span><span class="hljs-params">(<span class="hljs-number">0.1</span>)</span></span> <span class="hljs-comment">// =&gt; true</span>
-<span class="hljs-function"><span class="hljs-title">isNumber</span><span class="hljs-params">(NaN)</span></span> <span class="hljs-comment">// =&gt; false</span>
-<span class="hljs-function"><span class="hljs-title">isNumber</span><span class="hljs-params">(Infinity)</span></span> <span class="hljs-comment">// =&gt; false</span></code></pre></dd>
+								<dd><pre><code class="language-ts">isNumber(<span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; true</span>
+isNumber(<span class="hljs-number">0.1</span>) <span class="hljs-comment">// =&gt; true</span>
+isNumber(<span class="hljs-literal">NaN</span>) <span class="hljs-comment">// =&gt; false</span>
+isNumber(<span class="hljs-literal">Infinity</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
+								</dd>
 							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3804,7 +3879,7 @@ isNil(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">//
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/isObject.ts#L13">isObject.ts:13</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/isObject.ts#L13">isObject.ts:13</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3816,8 +3891,9 @@ isNil(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">//
 								<dd><p>0.0.6</p>
 								</dd>
 								<dt>example</dt>
-								<dd><pre><code><span class="hljs-function"><span class="hljs-title">isObject</span><span class="hljs-params">({})</span></span> <span class="hljs-comment">// =&gt; true</span>
-<span class="hljs-function"><span class="hljs-title">isObject</span><span class="hljs-params">(<span class="hljs-number">1</span>)</span></span> <span class="hljs-comment">// =&gt; false</span></code></pre></dd>
+								<dd><pre><code class="language-ts">isObject({}) <span class="hljs-comment">// =&gt; true</span>
+isObject(<span class="hljs-number">1</span>) <span class="hljs-comment">// =&gt; false</span></code></pre>
+								</dd>
 							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3844,7 +3920,7 @@ isNil(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">//
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/isPhone.ts#L17">isPhone.ts:17</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/isPhone.ts#L15">isPhone.ts:15</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3856,10 +3932,8 @@ isNil(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">//
 								<dd><p>0.0.6</p>
 								</dd>
 								<dt>example</dt>
-								<dd><p>isPhone(&#39;17710067607&#39;)
-									// =&gt; true</p>
-									<p>isBoolean(&#39;11710067607&#39;)
-									// =&gt; false</p>
+								<dd><pre><code class="language-ts">isPhone(<span class="hljs-string">'17710067607'</span>)
+<span class="hljs-comment">// =&gt; true</span></code></pre>
 								</dd>
 							</dl>
 						</div>
@@ -3883,7 +3957,7 @@ isNil(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">//
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/isPromise.ts#L15">isPromise.ts:15</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/isPromise.ts#L13">isPromise.ts:13</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3895,11 +3969,8 @@ isNil(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">//
 								<dd><p>0.0.6</p>
 								</dd>
 								<dt>example</dt>
-								<dd><p>isPromise(null)
-									// =&gt; false</p>
-									<p>isPromise(0)
-									// =&gt; false</p>
-								</dd>
+								<dd><pre><code><span class="hljs-function"><span class="hljs-title">isPromise</span><span class="hljs-params">(null)</span></span>
+<span class="hljs-comment">// =&gt; false</span></code></pre></dd>
 							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3922,7 +3993,7 @@ isNil(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">//
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/isRegexp.ts#L14">isRegexp.ts:14</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/isRegexp.ts#L14">isRegexp.ts:14</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3931,8 +4002,9 @@ isNil(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">//
 							</div>
 							<dl class="tsd-comment-tags">
 								<dt>example</dt>
-								<dd><pre><code><span class="hljs-function"><span class="hljs-title">isRegExp</span><span class="hljs-params">(/hello/)</span></span> <span class="hljs-comment">// =&gt; true</span>
-<span class="hljs-function"><span class="hljs-title">isRegExp</span><span class="hljs-params">(new RegExp(<span class="hljs-string">'hello'</span>)</span></span>) <span class="hljs-comment">// =&gt; true</span></code></pre></dd>
+								<dd><pre><code class="language-ts">isRegExp(<span class="hljs-regexp">/hello/</span>) <span class="hljs-comment">// =&gt; true</span>
+isRegExp(<span class="hljs-keyword">new</span> <span class="hljs-built_in">RegExp</span>(<span class="hljs-string">'hello'</span>)) <span class="hljs-comment">// =&gt; true</span></code></pre>
+								</dd>
 							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3959,7 +4031,7 @@ isNil(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">//
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/isString.ts#L13">isString.ts:13</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/isString.ts#L13">isString.ts:13</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3971,8 +4043,9 @@ isNil(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">//
 								<dd><p>0.0.6</p>
 								</dd>
 								<dt>example</dt>
-								<dd><pre><code><span class="hljs-function"><span class="hljs-title">isString</span><span class="hljs-params">(<span class="hljs-string">''</span>)</span></span> <span class="hljs-comment">// =&gt; true</span>
-<span class="hljs-function"><span class="hljs-title">isString</span><span class="hljs-params">(<span class="hljs-string">'hello'</span>)</span></span> <span class="hljs-comment">// =&gt; true</span></code></pre></dd>
+								<dd><pre><code class="language-ts">isString(<span class="hljs-string">''</span>) <span class="hljs-comment">// =&gt; true</span>
+isString(<span class="hljs-string">'hello'</span>) <span class="hljs-comment">// =&gt; true</span></code></pre>
+								</dd>
 							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3999,7 +4072,7 @@ isNil(<span class="hljs-literal">undefined</span>) <span class="hljs-comment">//
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/isUndefined.ts#L13">isUndefined.ts:13</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/isUndefined.ts#L13">isUndefined.ts:13</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4040,16 +4113,34 @@ isUndefined(<span class="hljs-built_in">void</span> <span class="hljs-number">0<
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/isUrl.ts#L3">isUrl.ts:3</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/isUrl.ts#L15">isUrl.ts:15</a></li>
 							</ul>
 						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>检查 <code>value</code> 是否是一个Url</p>
+							</div>
+							<dl class="tsd-comment-tags">
+								<dt>since</dt>
+								<dd><p>0.0.6</p>
+								</dd>
+								<dt>example</dt>
+								<dd><pre><code class="language-ts">isUrl(<span class="hljs-string">''</span>) <span class="hljs-comment">// =&gt; false</span>
+isUrl(<span class="hljs-string">'www.baidu.com'</span>) <span class="hljs-comment">// =&gt; true</span></code></pre>
+								</dd>
+							</dl>
+						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
 								<h5>value: <span class="tsd-signature-type">any</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>要检查的值</p>
+								</div>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						<p><code>value</code> 是字符串返回 <code>true</code>，否则返回 <code>false</code></p>
 					</li>
 				</ul>
 			</section>
@@ -4063,7 +4154,7 @@ isUndefined(<span class="hljs-built_in">void</span> <span class="hljs-number">0<
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/urlToList.ts#L15">urlToList.ts:15</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/urlToList.ts#L16">urlToList.ts:16</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4075,11 +4166,11 @@ isUndefined(<span class="hljs-built_in">void</span> <span class="hljs-number">0<
 								<dd><p>0.0.5</p>
 								</dd>
 								<dt>example</dt>
-								<dd><p>urlToList(test)
-									// =&gt; [&#39;/test&#39;]</p>
-									<p>urlToList(/admin/user)
-									// =&gt; [&#39;/test&#39;, &#39;/test/user&#39;]</p>
-								</dd>
+								<dd><pre><code><span class="hljs-function"><span class="hljs-title">urlToList</span><span class="hljs-params">(test)</span></span>
+<span class="hljs-comment">// =&gt; ['/test']</span>
+
+<span class="hljs-function"><span class="hljs-title">urlToList</span><span class="hljs-params">(/admin/user)</span></span>
+<span class="hljs-comment">// =&gt; ['/test', '/test/user']</span></code></pre></dd>
 							</dl>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4104,7 +4195,7 @@ isUndefined(<span class="hljs-built_in">void</span> <span class="hljs-number">0<
 				<div class="tsd-signature tsd-kind-icon">default<wbr>Options<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">object</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/ArabicChinese/config.ts#L47">ArabicChinese/config.ts:47</a></li>
+						<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/ArabicChinese/config.ts#L47">ArabicChinese/config.ts:47</a></li>
 					</ul>
 				</aside>
 				<section class="tsd-panel tsd-member tsd-kind-variable tsd-parent-kind-object-literal tsd-is-external">
@@ -4113,7 +4204,7 @@ isUndefined(<span class="hljs-built_in">void</span> <span class="hljs-number">0<
 					<div class="tsd-signature tsd-kind-icon">complete<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/ArabicChinese/config.ts#L51">ArabicChinese/config.ts:51</a></li>
+							<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/ArabicChinese/config.ts#L51">ArabicChinese/config.ts:51</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -4123,7 +4214,7 @@ isUndefined(<span class="hljs-built_in">void</span> <span class="hljs-number">0<
 					<div class="tsd-signature tsd-kind-icon">lang<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"cn"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;cn&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/ArabicChinese/config.ts#L49">ArabicChinese/config.ts:49</a></li>
+							<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/ArabicChinese/config.ts#L49">ArabicChinese/config.ts:49</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -4133,7 +4224,7 @@ isUndefined(<span class="hljs-built_in">void</span> <span class="hljs-number">0<
 					<div class="tsd-signature tsd-kind-icon">out<wbr>Symbol<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> =&nbsp;true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/ArabicChinese/config.ts#L52">ArabicChinese/config.ts:52</a></li>
+							<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/ArabicChinese/config.ts#L52">ArabicChinese/config.ts:52</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -4143,7 +4234,7 @@ isUndefined(<span class="hljs-built_in">void</span> <span class="hljs-number">0<
 					<div class="tsd-signature tsd-kind-icon">ten<wbr>Min<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> =&nbsp;false</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/ArabicChinese/config.ts#L50">ArabicChinese/config.ts:50</a></li>
+							<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/ArabicChinese/config.ts#L50">ArabicChinese/config.ts:50</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -4153,7 +4244,7 @@ isUndefined(<span class="hljs-built_in">void</span> <span class="hljs-number">0<
 					<div class="tsd-signature tsd-kind-icon">ww<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">true</span><span class="tsd-signature-symbol"> =&nbsp;true</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/alitajs/autils/blob/525b302/src/ArabicChinese/config.ts#L48">ArabicChinese/config.ts:48</a></li>
+							<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/ArabicChinese/config.ts#L48">ArabicChinese/config.ts:48</a></li>
 						</ul>
 					</aside>
 				</section>

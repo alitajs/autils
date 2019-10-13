@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Policy | @alitajs/autils</title>
+	<title>ILang | @alitajs/autils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
@@ -2377,32 +2377,29 @@ img {
 </header>
 <nav class="tsd-navigation secondary">
 	<ul>
-		<li class="current tsd-kind-class tsd-is-external">
-			<a href="policy.html" class="tsd-kind-icon">Policy</a>
+		<li class="current tsd-kind-interface tsd-is-external">
+			<a href="ilang.html" class="tsd-kind-icon">ILang</a>
 			<ul>
-				<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
-					<a href="policy.html#constructor" class="tsd-kind-icon">constructor</a>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a href="ilang.html#complete" class="tsd-kind-icon">complete</a>
 				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
-					<a href="policy.html#allowactions" class="tsd-kind-icon">allow<wbr>Actions</a>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a href="ilang.html#digits" class="tsd-kind-icon">digits</a>
 				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
-					<a href="policy.html#denyactions" class="tsd-kind-icon">deny<wbr>Actions</a>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a href="ilang.html#minus" class="tsd-kind-icon">minus</a>
 				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-external">
-					<a href="policy.html#modulemap" class="tsd-kind-icon">module<wbr>Map</a>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a href="ilang.html#point" class="tsd-kind-icon">point</a>
 				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a href="policy.html#addpolicy" class="tsd-kind-icon">add<wbr>Policy</a>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a href="ilang.html#symbol" class="tsd-kind-icon">symbol</a>
 				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a href="policy.html#combinationverify" class="tsd-kind-icon">combination<wbr>Verify</a>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a href="ilang.html#unitchars" class="tsd-kind-icon">unit<wbr>Chars</a>
 				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a href="policy.html#multipleverify" class="tsd-kind-icon">multiple<wbr>Verify</a>
-				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<a href="policy.html#singleverify" class="tsd-kind-icon">single<wbr>Verify</a>
+				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+					<a href="ilang.html#units" class="tsd-kind-icon">units</a>
 				</li>
 			</ul>
 		</li>
@@ -2413,44 +2410,15 @@ img {
 		<section class="tsd-panel tsd-comment">
 			<div class="tsd-comment tsd-typography">
 				<div class="lead">
-					<p>解析权限策略，并提供验证功能</p>
+					<p>中文数字语言类型</p>
 				</div>
-				<dl class="tsd-comment-tags">
-					<dt>example</dt>
-					<dd><pre><code class="language-js"><span class="hljs-keyword">const</span> policy = <span class="hljs-keyword">new</span> Policy();
-
-<span class="hljs-keyword">const</span> actions = [
-  { <span class="hljs-attr">module</span>: <span class="hljs-string">'module1'</span>, <span class="hljs-attr">action</span>: <span class="hljs-string">'action1'</span> },
-  { <span class="hljs-attr">module</span>: <span class="hljs-string">'module1'</span>, <span class="hljs-attr">action</span>: <span class="hljs-string">'action2'</span> },
-  { <span class="hljs-attr">module</span>: <span class="hljs-string">'module1'</span>, <span class="hljs-attr">action</span>: <span class="hljs-string">'action3'</span> },
-  { <span class="hljs-attr">module</span>: <span class="hljs-string">'module2'</span>, <span class="hljs-attr">action</span>: <span class="hljs-string">'action1'</span> },
-  { <span class="hljs-attr">module</span>: <span class="hljs-string">'module2'</span>, <span class="hljs-attr">action</span>: <span class="hljs-string">'action2'</span> }
-];
-
-policy.addPolicy({
- <span class="hljs-attr">version</span>: <span class="hljs-number">1</span>,
- <span class="hljs-attr">statement</span>: [
-   {
-     <span class="hljs-attr">effect</span>: <span class="hljs-string">'allow'</span>,
-     <span class="hljs-attr">action</span>: [
-       <span class="hljs-string">'module1/*'</span>
-     ]
-   }
- ]
-});
-
-policy.singleVerify(<span class="hljs-string">'module1/action1'</span>);
-
-<span class="hljs-comment">// &gt;&gt; true</span></code></pre>
-					</dd>
-				</dl>
 			</div>
 		</section>
 		<section class="tsd-panel tsd-hierarchy">
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">Policy</span>
+					<span class="target">ILang</span>
 				</li>
 			</ul>
 		</section>
@@ -2459,186 +2427,152 @@ policy.singleVerify(<span class="hljs-string">'module1/action1'</span>);
 			<section class="tsd-panel tsd-index-panel">
 				<div class="tsd-index-content">
 					<section class="tsd-index-section tsd-is-external">
-						<h3>Constructors</h3>
-						<ul class="tsd-index-list">
-							<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-external"><a href="policy.html#constructor" class="tsd-kind-icon">constructor</a></li>
-						</ul>
-					</section>
-					<section class="tsd-index-section tsd-is-external">
 						<h3>Properties</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="policy.html#allowactions" class="tsd-kind-icon">allow<wbr>Actions</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="policy.html#denyactions" class="tsd-kind-icon">deny<wbr>Actions</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-class tsd-is-external"><a href="policy.html#modulemap" class="tsd-kind-icon">module<wbr>Map</a></li>
-						</ul>
-					</section>
-					<section class="tsd-index-section tsd-is-external">
-						<h3>Methods</h3>
-						<ul class="tsd-index-list">
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="policy.html#addpolicy" class="tsd-kind-icon">add<wbr>Policy</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="policy.html#combinationverify" class="tsd-kind-icon">combination<wbr>Verify</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="policy.html#multipleverify" class="tsd-kind-icon">multiple<wbr>Verify</a></li>
-							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="policy.html#singleverify" class="tsd-kind-icon">single<wbr>Verify</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="ilang.html#complete" class="tsd-kind-icon">complete</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="ilang.html#digits" class="tsd-kind-icon">digits</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="ilang.html#minus" class="tsd-kind-icon">minus</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="ilang.html#point" class="tsd-kind-icon">point</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="ilang.html#symbol" class="tsd-kind-icon">symbol</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="ilang.html#unitchars" class="tsd-kind-icon">unit<wbr>Chars</a></li>
+							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="ilang.html#units" class="tsd-kind-icon">units</a></li>
 						</ul>
 					</section>
 				</div>
 			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group tsd-is-external">
-			<h2>Constructors</h2>
-			<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
-				<a name="constructor" class="tsd-anchor"></a>
-				<h3>constructor</h3>
-				<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">new <wbr>Policy<span class="tsd-signature-symbol">(</span>actions<span class="tsd-signature-symbol">: </span><a href="../interfaces/iaction.html" class="tsd-signature-type">IAction</a><span class="tsd-signature-symbol">[]</span>, separator<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="policy.html" class="tsd-signature-type">Policy</a></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/Policy/index.ts#L97">Policy/index.ts:97</a></li>
-							</ul>
-						</aside>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>actions: <a href="../interfaces/iaction.html" class="tsd-signature-type">IAction</a><span class="tsd-signature-symbol">[]</span></h5>
-							</li>
-							<li>
-								<h5><span class="tsd-flag ts-flagOptional">Optional</span> separator: <span class="tsd-signature-type">string</span></h5>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <a href="policy.html" class="tsd-signature-type">Policy</a></h4>
-					</li>
-				</ul>
-			</section>
-		</section>
-		<section class="tsd-panel-group tsd-member-group tsd-is-external">
 			<h2>Properties</h2>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
-				<a name="allowactions" class="tsd-anchor"></a>
-				<h3>allow<wbr>Actions</h3>
-				<div class="tsd-signature tsd-kind-icon">allow<wbr>Actions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+				<a name="complete" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> complete</h3>
+				<div class="tsd-signature tsd-kind-icon">complete<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/Policy/index.ts#L96">Policy/index.ts:96</a></li>
+						<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/ArabicChinese/langs/type.ts#L30">ArabicChinese/langs/type.ts:30</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>整 - toMoney使用</p>
+					</div>
+				</div>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
-				<a name="denyactions" class="tsd-anchor"></a>
-				<h3>deny<wbr>Actions</h3>
-				<div class="tsd-signature tsd-kind-icon">deny<wbr>Actions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+				<a name="digits" class="tsd-anchor"></a>
+				<h3>digits</h3>
+				<div class="tsd-signature tsd-kind-icon">digits<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/Policy/index.ts#L97">Policy/index.ts:97</a></li>
+						<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/ArabicChinese/langs/type.ts#L11">ArabicChinese/langs/type.ts:11</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>单个数字</p>
+					</div>
+					<dl class="tsd-comment-tags">
+						<dt>example</dt>
+						<dd><p>&#39;零一二三四五六七八九&#39;</p>
+						</dd>
+						<dt>length</dt>
+						<dd><p>10</p>
+						</dd>
+					</dl>
+				</div>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-external">
-				<a name="modulemap" class="tsd-anchor"></a>
-				<h3>module<wbr>Map</h3>
-				<div class="tsd-signature tsd-kind-icon">module<wbr>Map<span class="tsd-signature-symbol">:</span> <a href="../interfaces/imoduleaction.html" class="tsd-signature-type">IModuleAction</a></div>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+				<a name="minus" class="tsd-anchor"></a>
+				<h3>minus</h3>
+				<div class="tsd-signature tsd-kind-icon">minus<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/Policy/index.ts#L95">Policy/index.ts:95</a></li>
+						<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/ArabicChinese/langs/type.ts#L20">ArabicChinese/langs/type.ts:20</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>负</p>
+					</div>
+				</div>
 			</section>
-		</section>
-		<section class="tsd-panel-group tsd-member-group tsd-is-external">
-			<h2>Methods</h2>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-				<a name="addpolicy" class="tsd-anchor"></a>
-				<h3>add<wbr>Policy</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">add<wbr>Policy<span class="tsd-signature-symbol">(</span>policy<span class="tsd-signature-symbol">: </span><a href="../interfaces/ipolicydata.html" class="tsd-signature-type">IPolicyData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/Policy/index.ts#L178">Policy/index.ts:178</a></li>
-							</ul>
-						</aside>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>policy: <a href="../interfaces/ipolicydata.html" class="tsd-signature-type">IPolicyData</a></h5>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-					</li>
-				</ul>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+				<a name="point" class="tsd-anchor"></a>
+				<h3>point</h3>
+				<div class="tsd-signature tsd-kind-icon">point<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/ArabicChinese/langs/type.ts#L22">ArabicChinese/langs/type.ts:22</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>点</p>
+					</div>
+				</div>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-				<a name="combinationverify" class="tsd-anchor"></a>
-				<h3>combination<wbr>Verify</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">combination<wbr>Verify<span class="tsd-signature-symbol">(</span>actionStr<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/Policy/index.ts#L130">Policy/index.ts:130</a></li>
-							</ul>
-						</aside>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>actionStr: <span class="tsd-signature-type">string</span></h5>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-					</li>
-				</ul>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+				<a name="symbol" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> symbol</h3>
+				<div class="tsd-signature tsd-kind-icon">symbol<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/ArabicChinese/langs/type.ts#L28">ArabicChinese/langs/type.ts:28</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>前缀符合 - toMoney使用</p>
+					</div>
+					<dl class="tsd-comment-tags">
+						<dt>example</dt>
+						<dd><p>人民币</p>
+						</dd>
+					</dl>
+				</div>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-				<a name="multipleverify" class="tsd-anchor"></a>
-				<h3>multiple<wbr>Verify</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">multiple<wbr>Verify<span class="tsd-signature-symbol">(</span>actions<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/Policy/index.ts#L141">Policy/index.ts:141</a></li>
-							</ul>
-						</aside>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>actions: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-					</li>
-				</ul>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+				<a name="unitchars" class="tsd-anchor"></a>
+				<h3>unit<wbr>Chars</h3>
+				<div class="tsd-signature tsd-kind-icon">unit<wbr>Chars<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/ArabicChinese/langs/type.ts#L18">ArabicChinese/langs/type.ts:18</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>节权位</p>
+					</div>
+					<dl class="tsd-comment-tags">
+						<dt>example</dt>
+						<dd><p>&#39;个十百千万亿&#39;</p>
+						</dd>
+						<dt>length</dt>
+						<dd><p>6</p>
+						</dd>
+					</dl>
+				</div>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
-				<a name="singleverify" class="tsd-anchor"></a>
-				<h3>single<wbr>Verify</h3>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
-					<li class="tsd-signature tsd-kind-icon">single<wbr>Verify<span class="tsd-signature-symbol">(</span>action<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<aside class="tsd-sources">
-							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/Policy/index.ts#L160">Policy/index.ts:160</a></li>
-							</ul>
-						</aside>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<ul class="tsd-parameters">
-							<li>
-								<h5>action: <span class="tsd-signature-type">string</span></h5>
-							</li>
-						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
-					</li>
-				</ul>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
+				<a name="units" class="tsd-anchor"></a>
+				<h3><span class="tsd-flag ts-flagOptional">Optional</span> units</h3>
+				<div class="tsd-signature tsd-kind-icon">units<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<aside class="tsd-sources">
+					<ul>
+						<li>Defined in <a href="https://github.com/alitajs/autils/blob/9015384/src/ArabicChinese/langs/type.ts#L36">ArabicChinese/langs/type.ts:36</a></li>
+					</ul>
+				</aside>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>单位 - toMoney使用</p>
+					</div>
+					<dl class="tsd-comment-tags">
+						<dt>example</dt>
+						<dd><p>元角分</p>
+						</dd>
+					</dl>
+				</div>
 			</section>
 		</section>
 		<footer class="with-border-bottom">
