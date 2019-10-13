@@ -1,14 +1,14 @@
 {
   "name": "@alitajs/autils",
-  "version": "0.3.1",
+  "version": "0.5.0",
   "description": "Awesome Utils(前端常用工具方法)",
   "repository": "git@github.com:alitajs/autils.git",
   "author": "wangxingkang <wang_xingkang@qq.com>",
   "license": "MIT",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "unpkg": "lib/index.js",
   "module": "es/index.js",
-  "typings": "es/index.d.ts",
+  "types": "lib/index.d.ts",
   "files": [
     "es",
     "lib"
