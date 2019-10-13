@@ -1,22 +1,37 @@
 /**
- * @ignore
- * ArabicChinese 语言类型
+ * 中文数字语言类型
  */
 export interface ILang {
-  // 单个数字集合
+  /**
+   * 单个数字
+   *
+   * @example '零一二三四五六七八九'
+   * @length 10
+   * */
   digits: string;
-  // 节权位集合
+  /**
+   * 节权位
+   *
+   * @example '个十百千万亿'
+   * @length 6
+   */
   unitChars: string;
-  // 负
+  /** 负 */
   minus: string;
-  // 点
+  /** 点 */
   point: string;
-  // ---------
-  // toMoney使用
-  // 前缀符合 - 人民币
+  /**
+   * 前缀符合 - toMoney使用
+   *
+   * @example 人民币
+   */
   symbol?: string;
-  // 整
+  /** 整 - toMoney使用 */
   complete?: string;
-  // 单位
+  /**
+   * 单位 - toMoney使用
+   *
+   * @example 元角分
+   */
   units?: string
 }

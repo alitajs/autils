@@ -2,16 +2,31 @@ import isString from '../isString';
 import isArray from '../isArray';
 
 /**
- * @ignore
- * 模块的操作集合
+ * 解析后的操作集合
+ *
+ * @example
+ *
+ * ```js
+ * const actions = {
+ *   'module1': [
+ *     'module1/action1',
+ *     'module1/action2'
+*     ]
+ * }
+ * ```
  */
 export interface IModuleAction {
   [module: string]: string[]
 }
 
 /**
- * @ignore
- * 操作类型
+ * 操作类型 (可理解为权限)
+ *
+ * @example
+ *
+ * ```
+ * { module: 'module1', action: 'action1' }
+ * ```
  */
 export interface IAction {
   module: string;
@@ -19,27 +34,32 @@ export interface IAction {
 }
 
 /**
- * @ignore
  * 授权语句
  */
 export interface IStatement {
-  // 授权效力 allow: 允许 deny: 禁止
+  /** 授权效力 allow: 允许 deny: 禁止 */
   effect: 'allow' | 'deny';
-  // 操作列表
+  /**
+   * 操作列表
+   *
+   * 1. `*` 表示所有
+   * 2. `module/*` 表示`module`模块所有
+   * */
   action: '*' | string[];
 }
 
 /**
- * @ignore
  * 权限策略
  */
 export interface IPolicyData {
+  /** 该权限策略版本 */
   version: string | number;
+  /** 授权语句集合 */
   statement: IStatement[]
 }
 
 /**
- * 权限策略
+ * 解析权限策略，并提供验证功能
  *
  * @example
  * ```js

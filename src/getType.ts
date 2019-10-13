@@ -29,8 +29,10 @@ export type TGetTypeReturn = TLiteralUnion<(
  * @param value 要检测的值
  * @returns 返回检测值的类型
  * @example
- * getType(1) // => 'Number'
- * getType(true) // => 'Boolean'
+ * ```ts
+ *  getType(1) // => 'Number'
+ *  getType(true) // => 'Boolean'
+ * ```
  */
 export default function getType(value: any): TGetTypeReturn {
   return Object.prototype.toString.call(value).slice(8, -1)

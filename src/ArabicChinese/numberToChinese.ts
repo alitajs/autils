@@ -12,7 +12,6 @@ import { defaultOptions, IOptions } from './config';
  * @param num 阿拉伯数字/字符串, 科学记数法字符串
  * @param lang 阿拉伯数字/字符串, 科学记数法字符串
  * @param options 转换配置
- * @param options.ww
  */
 export default function numberToChinese(
   num: number | string,

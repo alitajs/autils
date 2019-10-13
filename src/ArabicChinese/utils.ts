@@ -118,19 +118,6 @@ export function centerArray<T>(
 
 /**
  * @ignore
- * 检查key是否是对像的属性 (非原型链)
- * @param obj
- * @param key
- */
-export function hasOwn(
-  obj: object,
-  key: string
-): boolean {
-  return Object.prototype.hasOwnProperty.call(obj, key);
-}
-
-/**
- * @ignore
  * 获取中文单位的真实数位
  * @param index
  */

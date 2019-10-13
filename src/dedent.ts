@@ -2,9 +2,7 @@ import indent from './indent'
 import isArray from './isArray'
 
 /**
- * 首先，每一行紧跟前导空白的插入值为多行时，保持缩进。
- *
- * 然后，移除每一行的公共前导空白。
+ * 每一行紧跟前导空白的插入值，为多行时，保持缩进。并移除每一行的公共前导空白。
  *
  * @param literals 字面值
  * @param interpolations 插入值

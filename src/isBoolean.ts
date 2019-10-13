@@ -5,7 +5,7 @@
  * @param value 要检查的值
  * @returns `value` 是布尔值返回 `true`，否则返回 `false`
  * @example
- * ```
+ * ```ts
  * isBoolean(true) // => true
  * isBoolean(false) // => true
  * isBoolean('true') // => false

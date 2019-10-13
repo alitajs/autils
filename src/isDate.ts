@@ -7,7 +7,7 @@ import getType from './getType';
  * @param value 要检查的值
  * @returns `value` 是日期返回 `true`，否则返回 `false`
  * @example
- * ```
+ * ```ts
  * isDate(new Date()) // => true
  * ```
  */

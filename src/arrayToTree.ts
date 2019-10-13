@@ -6,13 +6,34 @@ interface IItem {
   [key: string]: any;
 }
 
+/**
+ * arrayToTree function options
+ */
 export interface IArrayToTreeOptions {
-  // 父节点属性的名称
+  /**
+   * 父节点属性的名称
+   *
+   * @default parentId
+   * */
   parentProperty?: string;
-  // 存储子节点的属性的名称
+  /**
+   * 存储子节点的属性的名称
+   *
+   * @default children
+   * */
   childrenProperty?: string;
-  // 唯一的节点标识符
+  /**
+   * 唯一的节点标识符
+   *
+   * @default id
+   * */
   customID?: string;
+
+  /**
+   * 根节点的ID
+   *
+   * @default 0
+   */
   rootID: number | string;
 }
 
@@ -67,11 +88,8 @@ function groupByParents(array, options?: IArrayToTreeOptions) {
  *
  * @since 0.0.6
  *
- * @param list
- * @param options
- *
- * @example
- *
+ * @param list 需要转换为树的数字
+ * @param options 转换配置
  */
 export default function arrayToTree(
   list: IItem[],

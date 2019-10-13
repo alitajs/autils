@@ -34,7 +34,6 @@ export interface ForOwnTraverse<T extends AnyObject, K extends string | number =
  */
 export default function forOwn<T extends AnyObject>(obj: T, traverse: ForOwnTraverse<T>) {
   for (const key in obj) {
-    /* istanbul ignore else */
     if (Object.prototype.hasOwnProperty.call(obj, key)) {
       if (traverse(obj[key] as any, key as any, obj) === false) {
         break

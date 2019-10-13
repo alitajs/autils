@@ -5,7 +5,7 @@
  * @param value 要检查的值
  * @returns `value` 是字符串返回 `true`，否则返回 `false`
  * @example
- * ```
+ * ```ts
  * isString('') // => true
  * isString('hello') // => true
  * ```

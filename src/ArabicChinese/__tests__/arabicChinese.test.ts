@@ -1,4 +1,4 @@
-import ArabicChinese from '../arabicChinese';
+import ArabicChinese from '..';
 
 const testData = [
   ['1', '一'],

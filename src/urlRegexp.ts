@@ -2,9 +2,8 @@
  * Url正则
  *
  * @since 0.0.6
- *
  * @example
- *
+ * ```
  * urlRegex.test('https://www.baidu.com')
  * // => true
  * */

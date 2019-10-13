@@ -5,7 +5,7 @@
  * @param value 要检查的值
  * @returns `value` 是函数返回 `true`，否则返回 `false`
  * @example
- * ```
+ * ```ts
  * isFunction(() => {}) // => true
  * isFunction(2) // => false
  * ```

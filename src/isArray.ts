@@ -5,7 +5,7 @@
  * @param value 要检查的值
  * @returns `value` 是数组返回 `true`，否则返回 `false`
  * @example
- * ```
+ * ```ts
  * isArray(['x']) // => true
  * isArray('x') // => false
  * ```

@@ -7,7 +7,7 @@ import isInteger from './isInteger';
  * @param value 要检查的值
  * @returns `value` 是负整数返回 `true`，否则返回 `false`
  * @example
- * ```
+ * ```ts
  * isNegativeInteger(-1) // => true
  * isNegativeInteger(1) // => false
  * ```

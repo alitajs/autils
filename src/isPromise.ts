@@ -5,12 +5,10 @@
  * @param value
  * @returns {boolean}
  * @example
- *
+ * ```
  * isPromise(null)
  * // => false
- *
- * isPromise(0)
- * // => false
+ * ```
  */
 export default function isPromise(
   value: any

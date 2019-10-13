@@ -7,12 +7,10 @@ import phoneRegexp from './phoneRegexp';
  * @param value
  * @returns {boolean}
  * @example
- *
+ * ```ts
  * isPhone('17710067607')
  * // => true
- *
- * isBoolean('11710067607')
- * // => false
+ * ```
  */
 export default function isPhone(value: any): boolean {
   return phoneRegexp.test(value);

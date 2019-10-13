@@ -7,7 +7,7 @@ import isArray from './isArray';
  * @param obj 要检查的值
  * @returns `obj` 是空对象返回 `true`，否则返回 `false`
  * @example
- * ```
+ * ```ts
  * isEmptyObject({}) // => true
  * isFunction({a: 1}) // => false
  * ```

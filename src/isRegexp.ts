@@ -6,7 +6,7 @@ import getType from './getType';
  * @param value 要检查的值
  * @returns `value` 是正则对象返回 `true`，否则返回 `false`
  * @example
- * ```
+ * ```ts
  * isRegExp(/hello/) // => true
  * isRegExp(new RegExp('hello')) // => true
  * ```
