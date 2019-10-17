@@ -50,5 +50,9 @@ export { default as forOwn } from './forOwn';
 export * from './dedent';
 export { default as indent } from './indent';
 
+// Promise utils
+export * from './delay';
+export * from './immediate';
+
 // 常用的类型定义
 export * from './enhanceType'
