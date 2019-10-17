@@ -96,6 +96,10 @@ export default class Policy {
   public allowActions: string[];
   public denyActions: string[];
 
+  /**
+   * @param actions 操作集合
+   * @param separator 分隔符
+   * */
   constructor(actions: IAction[], separator?: string) {
     // 模块的操作集合
     this.moduleMap = this.getModuleMap(actions);
@@ -107,13 +111,16 @@ export default class Policy {
     this.separator = separator || '/';
   }
 
+  /**
+   * 按照模块组织操作
+   * */
   private getModuleMap = (actions: IAction[] = []) => {
-    const moduleMap = {};
+    const moduleMap: IModuleAction = {};
 
     if (actions && actions.length) {
       actions.forEach(item => {
         const moduleName = item.module;
-        const policyAction = `${item.module}/${item.action}`;
+        const policyAction = `${item.module}${this.separator}${item.action}`;
         if (!moduleMap[moduleName]) {
           moduleMap[moduleName] = [policyAction];
         } else {
@@ -183,7 +190,7 @@ export default class Policy {
       statement.forEach((item) => {
         const { effect, action } = item;
 
-        let actions = [];
+        let actions: IAction[] = [];
 
         if (isString(action)) {
           actions = this.parseAction(action as string);
