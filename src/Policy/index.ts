@@ -6,7 +6,6 @@ import groupBy from '../groupBy';
  * 解析后的操作集合
  *
  * @example
- *
  * ```js
  * const actions = {
  *   'module1': [
@@ -24,7 +23,6 @@ export interface IModuleAction {
  * 操作类型 (可理解为权限)
  *
  * @example
- *
  * ```
  * { module: 'module1', action: 'action1' }
  * ```
@@ -54,7 +52,7 @@ export interface IStatement {
  */
 export interface IPolicyData {
   /** 该权限策略版本 */
-  version: string | number;
+  version: number;
   /** 授权语句集合 */
   statement: IStatement[]
 }
@@ -93,13 +91,16 @@ export interface IPolicyData {
  * */
 export default class Policy {
   private readonly separator: string;
+  // 以module为key存储权限
   public moduleMap: IModuleAction = {};
+  // 允许的权限集合
   public allowActions: string[];
+  // 禁止的权限集合
   public denyActions: string[];
 
   /**
    * @param actions 操作集合
-   * @param separator 分隔符
+   * @param separator 分隔符 默认: '/'
    * */
   constructor(actions: IAction[], separator?: string) {
     // 分隔符自定义
@@ -114,19 +115,28 @@ export default class Policy {
 
   /**
    * 按照模块组织操作
+   * @param actions 权限集合
    * */
-  private getModuleMap = (actions: IAction[] = []) => {
+  private getModuleMap = (actions: IAction[] = []): IModuleAction => {
     let moduleMap = {};
 
     if (actions) {
-      moduleMap = groupBy(actions, item => item.module, (item) => `${item.module}${this.separator}${item.action}`);
+      moduleMap = groupBy(actions, item => item.module, (item) => {
+        return `${item.module}${this.separator}${item.action}`;
+      });
     }
 
     return moduleMap;
   };
 
-  // 需要验证组合条件时
-  // eg: '((goods/create && !goods/list) && goods/info) || * || goods/info'
+  /**
+   * 验证组合条件的权限
+   * @param actionStr 需要验证的权限
+   * @example
+   * ```js
+   * policy.combinationVerify('((goods/create && !goods/list) && goods/info)')
+   * ```
+   * */
   combinationVerify = (actionStr: string): boolean => {
     const reg = /([\w|\d|\*]+\/[\w|*]+)|\*/g;
     let matchList = actionStr.match(reg);
@@ -137,7 +147,10 @@ export default class Policy {
     return !!eval(actionStr)
   };
 
-  // 验证Action
+  /**
+   * 验证单个或多个权限
+   * @param actions
+   */
   multipleVerify = (actions: string | string[]): boolean => {
     if (isString(actions)) {
       return this.singleVerify(actions as string);
@@ -155,8 +168,10 @@ export default class Policy {
     }
   };
 
-  // 验证单个action
-  // * | 'module1/action1'
+  /**
+   * 验证单个权限
+   * @param action
+   */
   singleVerify = (action: string): boolean => {
     // 表示任何用户皆可以访问
     if (action === '*') {
@@ -175,10 +190,15 @@ export default class Policy {
     return false;
   };
 
+  /**
+   * 添加权限策略
+   * @param policy
+   */
   addPolicy = (policy: IPolicyData) => {
     if (!policy) return;
     const { statement } = policy;
 
+    // 解析授权语句
     if (statement && statement.length) {
       statement.forEach((item) => {
         const { effect, action } = item;
@@ -195,12 +215,14 @@ export default class Policy {
           });
         }
 
+        // 允许
         if (effect === 'allow') {
           const actionList = this.allowActions.concat(actions);
           this.allowActions = [...new Set(actionList)];
           return;
         }
 
+        // 禁止
         if (effect === 'deny') {
           const actionList = this.denyActions.concat(actions);
           this.denyActions = [...new Set(actionList)];
@@ -210,7 +232,10 @@ export default class Policy {
     }
   };
 
-  // 解析Action
+  /**
+   * 解析权限
+   * @param action
+   */
   private parseAction = (action: string): string[] => {
     const actions = this.getAllAction();
     let result = [];
@@ -232,7 +257,9 @@ export default class Policy {
     return result;
   };
 
-  // 获取所有的Action
+  /**
+   * 获取所有的Action
+   */
   private getAllAction = () => {
     let actions = [];
     const modules = Object.keys(this.moduleMap);
