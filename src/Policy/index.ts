@@ -138,11 +138,11 @@ export default class Policy {
    * ```
    * */
   combinationVerify = (actionStr: string): boolean => {
-    const reg = /([\w|\d|\*]+\/[\w|*]+)|\*/g;
-    let matchList = actionStr.match(reg);
-    matchList.map((item) => {
+    const regStr = '([\\w|\\d|\\*]+\\/[\\w|*]+)|\\*';
+    const reg = new RegExp(regStr, 'g');
+    (actionStr.match(reg) || []).map((item) => {
       const result = this.singleVerify(item) ? 'true' : 'false';
-      actionStr = actionStr.replace(/([\w|\d|\*]+\/[\w|*]+)|\*/, result);
+      actionStr = actionStr.replace(new RegExp(regStr), result);
     });
     return !!eval(actionStr)
   };
@@ -163,9 +163,9 @@ export default class Policy {
           return false;
         }
       }
-
-      return true;
     }
+
+    return true;
   };
 
   /**
@@ -203,7 +203,7 @@ export default class Policy {
       statement.forEach((item) => {
         const { effect, action } = item;
 
-        let actions = [];
+        let actions: string[] = [];
 
         if (isString(action)) {
           actions = this.parseAction(action as string);
@@ -238,7 +238,7 @@ export default class Policy {
    */
   private parseAction = (action: string): string[] => {
     const actions = this.getAllAction();
-    let result = [];
+    let result: string[] = [];
 
     if (action === '*') {
       result = actions;
@@ -261,7 +261,7 @@ export default class Policy {
    * 获取所有的Action
    */
   private getAllAction = () => {
-    let actions = [];
+    let actions: string[] = [];
     const modules = Object.keys(this.moduleMap);
 
     modules.forEach((key) => {
