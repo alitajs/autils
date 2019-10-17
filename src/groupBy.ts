@@ -10,11 +10,16 @@ export interface GroupByIterator<T, K> {
   (item: T, index: number, data: T[]): K,
 }
 
+export interface GroupByFormatter<T> {
+  (item: T, index: number, data: T[]): any,
+}
+
 /**
  * 根据迭代函数返回的值对 `data` 进行分组。
  *
  * @param data 要分组的数据
  * @param iterator 迭代函数
+ * @param formatter 格式化函数
  * @returns 返回分组结果
  * @example
  * ```ts
@@ -24,7 +29,7 @@ export interface GroupByIterator<T, K> {
  *     { module: 'module1', action: 'action2' },
  *     { module: 'module2', action: 'action1' }
  *   ],
- *   item => item.type,
+ *   item => item.module,
  * )
  * // => {
  * // =>   module1: [
@@ -40,6 +45,7 @@ export interface GroupByIterator<T, K> {
 export default function groupBy<T, K extends keyof any>(
   data: T[],
   iterator: GroupByIterator<T, K>,
+  formatter?: GroupByFormatter<T>
 ) {
   return data.reduce<Record<K, T[]>>(
     (res, item, index) => {
@@ -47,7 +53,7 @@ export default function groupBy<T, K extends keyof any>(
       if (!res[key]) {
         res[key] = []
       }
-      res[key].push(item);
+      res[key].push(formatter ? formatter(item, index, data) : item);
       return res
     },
     {} as any,
