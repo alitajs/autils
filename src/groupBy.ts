@@ -23,7 +23,7 @@ export interface GroupByFormatter<T> {
  * @returns 返回分组结果
  * @example
  * ```ts
- * * groupBy(
+ * groupBy(
  *   [
  *     { module: 'module1', action: 'action1' },
  *     { module: 'module1', action: 'action2' },

@@ -1,5 +1,6 @@
 import isString from '../isString';
 import isArray from '../isArray';
+import groupBy from '../groupBy';
 
 /**
  * 解析后的操作集合
@@ -101,32 +102,24 @@ export default class Policy {
    * @param separator 分隔符
    * */
   constructor(actions: IAction[], separator?: string) {
+    // 分隔符自定义
+    this.separator = separator || '/';
     // 模块的操作集合
     this.moduleMap = this.getModuleMap(actions);
     // 允许的操作
     this.allowActions = [];
     // 拒绝的操作
     this.denyActions = [];
-    // 分隔符自定义
-    this.separator = separator || '/';
   }
 
   /**
    * 按照模块组织操作
    * */
   private getModuleMap = (actions: IAction[] = []) => {
-    const moduleMap: IModuleAction = {};
+    let moduleMap = {};
 
-    if (actions && actions.length) {
-      actions.forEach(item => {
-        const moduleName = item.module;
-        const policyAction = `${item.module}${this.separator}${item.action}`;
-        if (!moduleMap[moduleName]) {
-          moduleMap[moduleName] = [policyAction];
-        } else {
-          moduleMap[moduleName].push(policyAction);
-        }
-      })
+    if (actions) {
+      moduleMap = groupBy(actions, item => item.module, (item) => `${item.module}${this.separator}${item.action}`);
     }
 
     return moduleMap;
@@ -190,7 +183,7 @@ export default class Policy {
       statement.forEach((item) => {
         const { effect, action } = item;
 
-        let actions: IAction[] = [];
+        let actions = [];
 
         if (isString(action)) {
           actions = this.parseAction(action as string);
