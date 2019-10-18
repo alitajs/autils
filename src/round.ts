@@ -21,7 +21,7 @@ function round(
   number: number,
   precision: number = 0,
   type: IRoundType = 'default'
-): number {
+) {
   if (type === 'default') {
     return nativeRound(Math.round, number, precision)
   }
