@@ -31,6 +31,7 @@ export { default as urlToList } from './urlToList';
 
 // 工具类
 export { default as Policy } from './Policy';
+export { default as NumberPrecision } from './NumberPrecision';
 export { default as ArabicChinese } from './ArabicChinese';
 
 // Math
