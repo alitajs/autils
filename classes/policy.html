@@ -2496,7 +2496,7 @@ policy.singleVerify(<span class="hljs-string">'module1/action1'</span>);
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/d7e9eda/src/Policy/index.ts#L98">Policy/index.ts:98</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/a2aedbd/src/Policy/index.ts#L99">Policy/index.ts:99</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -2515,7 +2515,7 @@ policy.singleVerify(<span class="hljs-string">'module1/action1'</span>);
 								<h5><span class="tsd-flag ts-flagOptional">Optional</span> separator: <span class="tsd-signature-type">string</span></h5>
 								<div class="tsd-comment tsd-typography">
 									<div class="lead">
-										<p>分隔符</p>
+										<p>分隔符 默认: &#39;/&#39;</p>
 									</div>
 								</div>
 							</li>
@@ -2533,7 +2533,7 @@ policy.singleVerify(<span class="hljs-string">'module1/action1'</span>);
 				<div class="tsd-signature tsd-kind-icon">allow<wbr>Actions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/alitajs/autils/blob/d7e9eda/src/Policy/index.ts#L97">Policy/index.ts:97</a></li>
+						<li>Defined in <a href="https://github.com/alitajs/autils/blob/a2aedbd/src/Policy/index.ts#L97">Policy/index.ts:97</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -2543,7 +2543,7 @@ policy.singleVerify(<span class="hljs-string">'module1/action1'</span>);
 				<div class="tsd-signature tsd-kind-icon">deny<wbr>Actions<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/alitajs/autils/blob/d7e9eda/src/Policy/index.ts#L98">Policy/index.ts:98</a></li>
+						<li>Defined in <a href="https://github.com/alitajs/autils/blob/a2aedbd/src/Policy/index.ts#L99">Policy/index.ts:99</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -2553,7 +2553,7 @@ policy.singleVerify(<span class="hljs-string">'module1/action1'</span>);
 				<div class="tsd-signature tsd-kind-icon">module<wbr>Map<span class="tsd-signature-symbol">:</span> <a href="../interfaces/imoduleaction.html" class="tsd-signature-type">IModuleAction</a></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/alitajs/autils/blob/d7e9eda/src/Policy/index.ts#L96">Policy/index.ts:96</a></li>
+						<li>Defined in <a href="https://github.com/alitajs/autils/blob/a2aedbd/src/Policy/index.ts#L95">Policy/index.ts:95</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -2570,13 +2570,22 @@ policy.singleVerify(<span class="hljs-string">'module1/action1'</span>);
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/d7e9eda/src/Policy/index.ts#L178">Policy/index.ts:178</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/a2aedbd/src/Policy/index.ts#L197">Policy/index.ts:197</a></li>
 							</ul>
 						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>添加权限策略</p>
+							</div>
+						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
 								<h5>policy: <a href="../interfaces/ipolicydata.html" class="tsd-signature-type">IPolicyData</a></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+									</div>
+								</div>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -2593,13 +2602,23 @@ policy.singleVerify(<span class="hljs-string">'module1/action1'</span>);
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/d7e9eda/src/Policy/index.ts#L130">Policy/index.ts:130</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/a2aedbd/src/Policy/index.ts#L140">Policy/index.ts:140</a></li>
 							</ul>
 						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>验证组合条件的权限</p>
+							</div>
+						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
 								<h5>actionStr: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>需要验证的权限</p>
+									</div>
+								</div>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -2616,13 +2635,22 @@ policy.singleVerify(<span class="hljs-string">'module1/action1'</span>);
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/d7e9eda/src/Policy/index.ts#L141">Policy/index.ts:141</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/a2aedbd/src/Policy/index.ts#L154">Policy/index.ts:154</a></li>
 							</ul>
 						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>验证单个或多个权限</p>
+							</div>
+						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
 								<h5>actions: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+									</div>
+								</div>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -2639,13 +2667,22 @@ policy.singleVerify(<span class="hljs-string">'module1/action1'</span>);
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/alitajs/autils/blob/d7e9eda/src/Policy/index.ts#L160">Policy/index.ts:160</a></li>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/a2aedbd/src/Policy/index.ts#L175">Policy/index.ts:175</a></li>
 							</ul>
 						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>验证单个权限</p>
+							</div>
+						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
 								<h5>action: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+									</div>
+								</div>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>

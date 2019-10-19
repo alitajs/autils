@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IStatement | @alitajs/autils</title>
+	<title>NumberPrecision | @alitajs/autils</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
@@ -2377,14 +2377,23 @@ img {
 </header>
 <nav class="tsd-navigation secondary">
 	<ul>
-		<li class="current tsd-kind-interface tsd-is-external">
-			<a href="istatement.html" class="tsd-kind-icon">IStatement</a>
+		<li class="current tsd-kind-class tsd-is-external">
+			<a href="numberprecision.html" class="tsd-kind-icon">Number<wbr>Precision</a>
 			<ul>
-				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a href="istatement.html#action" class="tsd-kind-icon">action</a>
+				<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
+					<a href="numberprecision.html#constructor" class="tsd-kind-icon">constructor</a>
 				</li>
-				<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-					<a href="istatement.html#effect" class="tsd-kind-icon">effect</a>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a href="numberprecision.html#divide" class="tsd-kind-icon">divide</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a href="numberprecision.html#minus" class="tsd-kind-icon">minus</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a href="numberprecision.html#plus" class="tsd-kind-icon">plus</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<a href="numberprecision.html#times" class="tsd-kind-icon">times</a>
 				</li>
 			</ul>
 		</li>
@@ -2395,15 +2404,32 @@ img {
 		<section class="tsd-panel tsd-comment">
 			<div class="tsd-comment tsd-typography">
 				<div class="lead">
-					<p>授权语句</p>
+					<p>解决浮动运算问题，避免小数点后产生多数值和计算精度损失</p>
 				</div>
+				<dl class="tsd-comment-tags">
+					<dt>example</dt>
+					<dd><pre><code class="language-js"><span class="hljs-keyword">const</span> NP = <span class="hljs-keyword">new</span> NumberPrecision();
+
+NP.plus(<span class="hljs-number">0.1</span>, <span class="hljs-number">0.2</span>);
+&gt;&gt; <span class="hljs-number">0.3</span>
+
+NP.times(<span class="hljs-number">0.1</span>, <span class="hljs-number">0.2</span>);
+&gt;&gt; <span class="hljs-number">0.02</span>
+
+NP.minus(<span class="hljs-number">0.2</span>, <span class="hljs-number">0.1</span>);
+&gt;&gt; <span class="hljs-number">0.1</span>
+
+NP.divide(<span class="hljs-number">0.2</span>, <span class="hljs-number">0.1</span>);
+&gt;&gt; <span class="hljs-number">2</span></code></pre>
+					</dd>
+				</dl>
 			</div>
 		</section>
 		<section class="tsd-panel tsd-hierarchy">
 			<h3>Hierarchy</h3>
 			<ul class="tsd-hierarchy">
 				<li>
-					<span class="target">IStatement</span>
+					<span class="target">NumberPrecision</span>
 				</li>
 			</ul>
 		</section>
@@ -2412,50 +2438,209 @@ img {
 			<section class="tsd-panel tsd-index-panel">
 				<div class="tsd-index-content">
 					<section class="tsd-index-section tsd-is-external">
-						<h3>Properties</h3>
+						<h3>Constructors</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="istatement.html#action" class="tsd-kind-icon">action</a></li>
-							<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-external"><a href="istatement.html#effect" class="tsd-kind-icon">effect</a></li>
+							<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-external"><a href="numberprecision.html#constructor" class="tsd-kind-icon">constructor</a></li>
+						</ul>
+					</section>
+					<section class="tsd-index-section tsd-is-external">
+						<h3>Methods</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="numberprecision.html#divide" class="tsd-kind-icon">divide</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="numberprecision.html#minus" class="tsd-kind-icon">minus</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="numberprecision.html#plus" class="tsd-kind-icon">plus</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class tsd-is-external"><a href="numberprecision.html#times" class="tsd-kind-icon">times</a></li>
 						</ul>
 					</section>
 				</div>
 			</section>
 		</section>
 		<section class="tsd-panel-group tsd-member-group tsd-is-external">
-			<h2>Properties</h2>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-				<a name="action" class="tsd-anchor"></a>
-				<h3>action</h3>
-				<div class="tsd-signature tsd-kind-icon">action<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"*"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">[]</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/alitajs/autils/blob/a2aedbd/src/Policy/index.ts#L47">Policy/index.ts:47</a></li>
-					</ul>
-				</aside>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>操作列表</p>
-					</div>
-					<ol>
-						<li><code>*</code> 表示所有</li>
-						<li><code>module/*</code> 表示<code>module</code>模块所有</li>
-					</ol>
-				</div>
+			<h2>Constructors</h2>
+			<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
+				<a name="constructor" class="tsd-anchor"></a>
+				<h3>constructor</h3>
+				<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-external">
+					<li class="tsd-signature tsd-kind-icon">new <wbr>Number<wbr>Precision<span class="tsd-signature-symbol">(</span>flag<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="numberprecision.html" class="tsd-signature-type">NumberPrecision</a></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/a2aedbd/src/NumberPrecision/index.ts#L22">NumberPrecision/index.ts:22</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5><span class="tsd-flag ts-flagDefault value">Default value</span> flag: <span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol"> =&nbsp;true</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+										<p>是否进行边界检查</p>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <a href="numberprecision.html" class="tsd-signature-type">NumberPrecision</a></h4>
+					</li>
+				</ul>
 			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-external">
-				<a name="effect" class="tsd-anchor"></a>
-				<h3>effect</h3>
-				<div class="tsd-signature tsd-kind-icon">effect<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"allow"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"deny"</span></div>
-				<aside class="tsd-sources">
-					<ul>
-						<li>Defined in <a href="https://github.com/alitajs/autils/blob/a2aedbd/src/Policy/index.ts#L40">Policy/index.ts:40</a></li>
-					</ul>
-				</aside>
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>授权效力 allow: 允许 deny: 禁止</p>
-					</div>
-				</div>
+		</section>
+		<section class="tsd-panel-group tsd-member-group tsd-is-external">
+			<h2>Methods</h2>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+				<a name="divide" class="tsd-anchor"></a>
+				<h3>divide</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<li class="tsd-signature tsd-kind-icon">divide<span class="tsd-signature-symbol">(</span>num1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, num2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, <span class="tsd-signature-symbol">...</span>others<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/a2aedbd/src/NumberPrecision/index.ts#L115">NumberPrecision/index.ts:115</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>精确除法</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>num1: <span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li>
+								<h5>num2: <span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>others: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+									</div>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+				<a name="minus" class="tsd-anchor"></a>
+				<h3>minus</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<li class="tsd-signature tsd-kind-icon">minus<span class="tsd-signature-symbol">(</span>num1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, num2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, <span class="tsd-signature-symbol">...</span>others<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/a2aedbd/src/NumberPrecision/index.ts#L101">NumberPrecision/index.ts:101</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>精确减法</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>num1: <span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li>
+								<h5>num2: <span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>others: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+									</div>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+				<a name="plus" class="tsd-anchor"></a>
+				<h3>plus</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<li class="tsd-signature tsd-kind-icon">plus<span class="tsd-signature-symbol">(</span>num1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, num2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, <span class="tsd-signature-symbol">...</span>others<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/a2aedbd/src/NumberPrecision/index.ts#L67">NumberPrecision/index.ts:67</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>精确加法</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>num1: <span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li>
+								<h5>num2: <span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>others: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+									</div>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-external">
+				<a name="times" class="tsd-anchor"></a>
+				<h3>times</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-external">
+					<li class="tsd-signature tsd-kind-icon">times<span class="tsd-signature-symbol">(</span>num1<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, num2<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, <span class="tsd-signature-symbol">...</span>others<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+							<ul>
+								<li>Defined in <a href="https://github.com/alitajs/autils/blob/a2aedbd/src/NumberPrecision/index.ts#L81">NumberPrecision/index.ts:81</a></li>
+							</ul>
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>精确乘法</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>num1: <span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li>
+								<h5>num2: <span class="tsd-signature-type">number</span></h5>
+							</li>
+							<li>
+								<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>others: <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">[]</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<div class="lead">
+									</div>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+					</li>
+				</ul>
 			</section>
 		</section>
 		<footer class="with-border-bottom">
