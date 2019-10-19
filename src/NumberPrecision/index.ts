@@ -1,10 +1,29 @@
 /**
  * 解决浮动运算问题，避免小数点后产生多数值和计算精度损失
+ *
+ * @example
+ * ```js
+ * const NP = new NumberPrecision();
+ *
+ * NP.plus(0.1, 0.2);
+ * >> 0.3
+ *
+ * NP.times(0.1, 0.2);
+ * >> 0.02
+ *
+ * NP.minus(0.2, 0.1);
+ * >> 0.1
+ *
+ * NP.divide(0.2, 0.1);
+ * >> 2
+ * ```
  */
-class NumberPrecision {
-  // 是否进行边界检查
+export default class NumberPrecision {
   private readonly boundaryCheckingState: boolean;
 
+  /**
+   * @param flag 是否进行边界检查
+   */
   constructor(flag: boolean = true) {
     this.boundaryCheckingState = flag;
   }
@@ -104,5 +123,3 @@ class NumberPrecision {
     return this.times((num1Changed / num2Changed), Math.pow(10, this.digitLength(num2) - this.digitLength(num1)));
   }
 }
-
-export default NumberPrecision;
