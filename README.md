@@ -67,6 +67,7 @@ yarn add @alitajs/autils
 * [isPromise](https://alitajs.github.io/autils/globals.html#ispromise) 检查`value`是否为`Promise`。
 * [isRegExp](https://alitajs.github.io/autils/globals.html#isregexp) 检查 `value` 是否是一个正则对象。
 * [isString](https://alitajs.github.io/autils/globals.html#isstring) 检查 `value` 是否是一个字符串
+* [isSymbol](https://alitajs.github.io/autils/globals.html#issymbol) 检查 `value` 是否是原始 `Symbol` 或者对象。
 * [isUndefined](https://alitajs.github.io/autils/globals.html#isundefined) 检查 `value` 是否等于 `undefined`。
 * [isUrl](https://alitajs.github.io/autils/globals.html#isurl) 检查 `value` 是否是一个Url
 * [urlToList](https://alitajs.github.io/autils/globals.html#urltolist) 转换url为数组
