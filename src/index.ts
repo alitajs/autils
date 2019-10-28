@@ -25,6 +25,7 @@ export { default as isRegexp } from './isRegexp';
 export { default as isString } from './isString';
 export { default as isUndefined } from './isUndefined';
 export { default as isUrl } from './isUrl';
+export { default as isSymbol } from './isSymbol';
 
 // url utils
 export { default as urlToList } from './urlToList';
