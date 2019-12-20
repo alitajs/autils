@@ -26,7 +26,19 @@ npm install @alitajs/autils --save
 ```
 yarn add @alitajs/autils
 ```
+## Usage
+```
+import dagger from '@alitajs/autils';
+dagger.isArray([]) // true
 
+```
+or use
+
+```
+import {isArray} from '@alitajs/autils';
+isArray([]) // true
+
+```
 
 ## 📝 目录
 

@@ -1,61 +1,147 @@
-// @index(['./*', '!./_*', '!./typings.d.ts', '!./*.test.ts'], pp => `export * from '${pp.path}'`)
-
-// Array
-export { default as arrayToObject } from './arrayToObject';
-export { default as arrayToTree } from './arrayToTree';
-
-// Lang
-export { default as isArray } from './isArray';
-export { default as isBoolean } from './isBoolean';
-export { default as isDate } from './isDate';
-export { default as isEmail } from './isEmail';
-export { default as isEmptyObject } from './isEmptyObject';
-export { default as isFunction } from './isFunction';
-export { default as isIdCard } from './isIdCard';
-export { default as isInteger } from './isInteger';
-export { default as isNaN } from './isNaN';
-export { default as isNegativeInteger } from './isNegativeInteger';
-export { default as isNil } from './isNil';
-export { default as isNull } from './isNull';
-export { default as isNumber } from './isNumber';
-export { default as isObject } from './isObject';
-export { default as isPhone } from './isPhone';
-export { default as isPromise } from './isPromise';
-export { default as isRegexp } from './isRegexp';
-export { default as isString } from './isString';
-export { default as isUndefined } from './isUndefined';
-export { default as isUrl } from './isUrl';
-export { default as isSymbol } from './isSymbol';
+import arrayToObject from './arrayToObject';
+import arrayToTree from './arrayToTree';
+import isArray from './isArray';
+import isBoolean from './isBoolean';
+import isDate from './isDate';
+import isEmail from './isEmail';
+import isEmptyObject from './isEmptyObject';
+import isFunction from './isFunction';
+import isIdCard from './isIdCard';
+import isInteger from './isInteger';
+import isNaN from './isNaN';
+import isNegativeInteger from './isNegativeInteger';
+import isNil from './isNil';
+import isNull from './isNull';
+import isNumber from './isNumber';
+import isObject from './isObject';
+import isPhone from './isPhone';
+import isPromise from './isPromise';
+import isRegexp from './isRegexp';
+import isString from './isString';
+import isUndefined from './isUndefined';
+import isUrl from './isUrl';
+import isSymbol from './isSymbol';
 
 // url utils
-export { default as urlToList } from './urlToList';
+import urlToList from './urlToList';
 
 // 工具类
-export { default as Policy } from './Policy';
-export { default as NumberPrecision } from './NumberPrecision';
-export { default as ArabicChinese } from './ArabicChinese';
+import Policy from './Policy';
+import NumberPrecision from './NumberPrecision';
+import ArabicChinese from './ArabicChinese';
 
 // Math
-export { default as round } from './round';
+import round from './round';
 
 // Regexp
-export { default as urlRegexp } from './urlRegexp';
-export { default as emailRegexp } from './emailRegexp';
-export { default as phoneRegexp } from './phoneRegexp';
-export { default as idCardRegexp } from './idCardRegexp';
+import urlRegexp from './urlRegexp';
+import emailRegexp from './emailRegexp';
+import phoneRegexp from './phoneRegexp';
+import idCardRegexp from './idCardRegexp';
 
 // Utils
-export { default as getUrlParams } from './getUrlParams';
-export { default as deepClone } from './deepClone';
-export { default as getType } from './getType';
-export { default as groupBy } from './groupBy';
-export { default as forOwn } from './forOwn';
-export * from './dedent';
-export { default as indent } from './indent';
+import getUrlParams from './getUrlParams';
+import deepClone from './deepClone';
+import getType from './getType';
+import groupBy from './groupBy';
+import forOwn from './forOwn';
+import {dedent} from './dedent';
+import indent from './indent';
 
 // Promise utils
-export * from './delay';
-export * from './immediate';
+import delay from './delay';
+import {immediate} from './immediate';
 
 // 常用的类型定义
-export * from './enhanceType'
+import * as enhanceType from './enhanceType'
+
+const dagger = {
+  arrayToObject,
+  arrayToTree,
+  isArray,
+  isBoolean,
+  isDate,
+  isEmail,
+  isEmptyObject,
+  isFunction,
+  isIdCard,
+  isInteger,
+  isNaN,
+  isNegativeInteger,
+  isNil,
+  isNull,
+  isNumber,
+  isObject,
+  isPhone,
+  isPromise,
+  isRegexp,
+  isString,
+  isUndefined,
+  isUrl,
+  isSymbol,
+  urlToList,
+  Policy,
+  NumberPrecision,
+  ArabicChinese,
+  round,
+  urlRegexp,
+  emailRegexp,
+  phoneRegexp,
+  idCardRegexp,
+  getUrlParams,
+  deepClone,
+  getType,
+  groupBy,
+  forOwn,
+  dedent,
+  indent,
+  delay,
+  immediate,
+  enhanceType,
+};
+
+export {
+  dagger as default,
+  arrayToObject,
+  arrayToTree,
+  isArray,
+  isBoolean,
+  isDate,
+  isEmail,
+  isEmptyObject,
+  isFunction,
+  isIdCard,
+  isInteger,
+  isNaN,
+  isNegativeInteger,
+  isNil,
+  isNull,
+  isNumber,
+  isObject,
+  isPhone,
+  isPromise,
+  isRegexp,
+  isString,
+  isUndefined,
+  isUrl,
+  isSymbol,
+  urlToList,
+  Policy,
+  NumberPrecision,
+  ArabicChinese,
+  round,
+  urlRegexp,
+  emailRegexp,
+  phoneRegexp,
+  idCardRegexp,
+  getUrlParams,
+  deepClone,
+  getType,
+  groupBy,
+  forOwn,
+  dedent,
+  indent,
+  delay,
+  immediate,
+  enhanceType,
+}
