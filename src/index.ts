@@ -45,6 +45,7 @@ export { default as phoneRegexp } from './phoneRegexp';
 export { default as idCardRegexp } from './idCardRegexp';
 
 // Utils
+export { default as getUrlParams } from './getUrlParams';
 export { default as deepClone } from './deepClone';
 export { default as getType } from './getType';
 export { default as groupBy } from './groupBy';
