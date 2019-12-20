@@ -5,3 +5,4 @@ node_modules/
 es
 lib
 .typedoc
+.package-lock.json
